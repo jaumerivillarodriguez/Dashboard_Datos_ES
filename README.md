@@ -25,7 +25,7 @@ Todos los datos provienen de fuentes públicas oficiales de España, principalme
 * **Power BI Desktop:** Para la conexión, transformación, modelado y visualización de datos.
 * **Git:** Para el control de versiones local.
 * **GitHub:** Para el alojamiento del repositorio y la gestión de proyectos.
-* **(Futuro) dbt (data build tool):** Considerado para transformaciones de datos a mayor escala.
+* **(Futuro) dbt (data build tool):l:** Considerado para transformaciones de datos a mayor escala.
 
 ## Estructura del Repositorio:
 
@@ -34,10 +34,14 @@ Todos los datos provienen de fuentes públicas oficiales de España, principalme
 * `README.md`: Este archivo, que describe el proyecto.
 * `.gitignore`: Configuración para ignorar archivos no necesarios para el control de versiones.
 
+## Cómo Usar el Informe:
 
+[Aquí, una vez que tengas el informe publicado en Power BI Service, pondrás un enlace directo. Si alguien quiere ver el código, puede clonar el repositorio y abrir el archivo .pbip con Power BI Desktop.]
 
 ## Contacto:
 
-Jaume Rivilla Rodríguez
-jaumerivilla@gmail.com
-www.linkedin.com/in/jaume-rivilla-rodriguez
+¡Conéctate conmigo!
+
+* **Jaume Rivilla Rodríguez**
+* 📧 **Email:** [jaumerivilla@gmail.com](mailto:jaumerivilla@gmail.com)
+* 🔗 **LinkedIn:** [linkedin.com/in/jaume-rivilla-rodriguez](https://www.linkedin.com/in/jaume-rivilla-rodriguez)
