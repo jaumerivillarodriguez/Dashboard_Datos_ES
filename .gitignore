@@ -1,0 +1,35 @@
+# Power BI Desktop files
+*.pbix
+*.pbit
+
+# Power BI Project (PBIP) folders and temporary files
+
+pbix_project/**/*.cache/
+pbix_project/**/*.cdp/
+pbix_project/**/*.msmdsrv/
+pbix_project/**/*.pbi/
+pbix_project/**/*.bim/
+pbix_project/**/cache/
+pbix_project/**/temp/
+pbix_project/**/DesktopEditorReportStorage/
+pbix_project/**/pbiviz/
+pbix_project/**/resources/
+pbix_project/**/local_resources/
+# If using local data sources within the PBIP folder that should NOT be versioned
+pbix_project/**/data/
+
+# Data files (do not commit large raw data files to Git)
+raw_data/
+*.csv
+*.xlsx
+*.xls
+*.json
+*.parquet
+*.sqlite
+
+# VS Code specific ignores
+.vscode/
+
+# OS generated files
+.DS_Store
+Thumbs.db
