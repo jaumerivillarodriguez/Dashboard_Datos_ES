@@ -77,7 +77,13 @@ table VIVIENDAS
 				    #"Dividir columna por delimitador" = Table.SplitColumn(#"Otras columnas con anulación de dinamización", "Periodo-", Splitter.SplitTextByDelimiter(" - ", QuoteStyle.Csv), {"Periodo", "Indicador"}),
 				    #"Personalizada agregada1" = Table.AddColumn(#"Dividir columna por delimitador", "Fecha", each Date.FromText(Text.Combine({Text.Start([Periodo], 4), "-", Text.From(Number.From(Text.End([Periodo], 1))*3-2), "-01"}))),
 				    #"Columnas quitadas2" = Table.RemoveColumns(#"Personalizada agregada1",{"Periodo"}),
-				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Columnas quitadas2",{{"CCAA", type text}, {"TipoVivienda", type text}, {"Indicador", type text}, {"Valor", type number}, {"Fecha", type date}})
+				    #"Valor reemplazado" = Table.ReplaceValue(#"Columnas quitadas2","Balears, Illes","Illes Balears",Replacer.ReplaceText,{"CCAA"}),
+				    #"Valor reemplazado1" = Table.ReplaceValue(#"Valor reemplazado","Asturias, Principado de","Principado de Asturias",Replacer.ReplaceText,{"CCAA"}),
+				    #"Valor reemplazado2" = Table.ReplaceValue(#"Valor reemplazado1","Madrid, Comunidad de","Comunidad de Madrid",Replacer.ReplaceText,{"CCAA"}),
+				    #"Valor reemplazado3" = Table.ReplaceValue(#"Valor reemplazado2","Murcia, Región de","Región de Murcia",Replacer.ReplaceText,{"CCAA"}),
+				    #"Valor reemplazado4" = Table.ReplaceValue(#"Valor reemplazado3","Navarra, Comunidad Foral de","Comunidad Foral de Navarra",Replacer.ReplaceText,{"CCAA"}),
+				    #"Valor reemplazado5" = Table.ReplaceValue(#"Valor reemplazado4","Rioja, La","La Rioja",Replacer.ReplaceText,{"CCAA"}),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Valor reemplazado5",{{"CCAA", type text}, {"TipoVivienda", type text}, {"Indicador", type text}, {"Valor", type number}, {"Fecha", type date}})
 				in
 				    #"Tipo cambiado"
 
