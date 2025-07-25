@@ -1,0 +1,70 @@
+table SUELDOS_POR_ACTIVIDAD
+	lineageTag: ac872c80-ca0d-460b-8459-7f772de93098
+
+	column Actividad
+		dataType: string
+		lineageTag: 354fc679-5dd1-4811-a528-f1a81615f603
+		summarizeBy: none
+		sourceColumn: Actividad
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fecha
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: f6c7efe8-0c95-4c17-a383-9ced26fdc725
+		summarizeBy: none
+		sourceColumn: Fecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Sexo
+		dataType: string
+		lineageTag: 9390fd0d-c8f4-4b86-9a55-121081d4e512
+		summarizeBy: none
+		sourceColumn: Sexo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Salario
+		dataType: double
+		lineageTag: f027fdfa-c789-4e71-a512-bbf5a2165c77
+		summarizeBy: sum
+		sourceColumn: Salario
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition SUELDOS_POR_ACTIVIDAD = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents("C:\Users\jaume\Documents\Porfolio\Dashboard_Datos_ES\raw_data\Sueldo_medio_act_lab.xlsx"), null, true),
+				    #"tabla-1" = Origen{[Name="tabla-28185"]}[Data],
+				    #"Otras columnas quitadas" = Table.SelectColumns(#"tabla-1",{"Column1", "Column2", "Column3", "Column4"}),
+				    #"Filas superiores quitadas" = Table.Skip(#"Otras columnas quitadas",6),
+				    #"Filas inferiores quitadas" = Table.RemoveLastN(#"Filas superiores quitadas",8),
+				    #"Texto recortado" = Table.TransformColumns(#"Filas inferiores quitadas",{{"Column1", Text.Trim, type text}}),
+				    #"Columna condicional agregada" = Table.AddColumn(#"Texto recortado", "ActividadProv", each if [Column1] = "B_S Todas las secciones" then [Column1] else if [Column1] = "B Industrias extractivas" then [Column1] else if [Column1] = "C Industria manufacturera" then [Column1] else if [Column1] = "D Suministro de energía eléctrica, gas, vapor y aire acondicionado" then [Column1] else if [Column1] = "E Suministro de agua, actividades de saneamiento, gestión de residuos y descontaminación" then [Column1] else if [Column1] = "F Construcción" then [Column1] else if [Column1] = "G Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas" then [Column1] else if [Column1] = "H Transporte y almacenamiento" then [Column1] else if [Column1] = "I Hostelería" then [Column1] else if [Column1] = "J Información y comunicaciones" then [Column1] else if [Column1] = "K Actividades financieras y de seguros" then [Column1] else if [Column1] = "L Actividades inmobiliarias" then [Column1] else if [Column1] = "M Actividades profesionales, científicas y técnicas" then [Column1] else if [Column1] = "N Actividades administrativas y servicios auxiliares" then [Column1] else if [Column1] = "P Educación" then [Column1] else if [Column1] = "Q Actividades sanitarias y de servicios sociales" then [Column1] else if [Column1] = "R Actividades artísticas, recreativas y de entretenimiento" then [Column1] else if [Column1] = "S Otros servicios" then [Column1] else null),
+				    #"Rellenar hacia abajo" = Table.FillDown(#"Columna condicional agregada",{"ActividadProv"}),
+				    #"Dividir columna por delimitador" = Table.SplitColumn(#"Rellenar hacia abajo", "ActividadProv", Splitter.SplitTextByEachDelimiter({" "}, QuoteStyle.Csv, false), {"Actividad.1", "Actividad"}),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Dividir columna por delimitador",{"Actividad.1"}),
+				    #"Columna condicional agregada1" = Table.AddColumn(#"Columnas quitadas", "AñoProv", each if Text.StartsWith([Column1], "2") then [Column1] else null),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Columna condicional agregada1",{{"AñoProv", Int64.Type}}),
+				    #"Personalizada agregada" = Table.AddColumn(#"Tipo cambiado", "Fecha", each #date([AñoProv], 1, 1)),
+				    #"Columnas quitadas1" = Table.RemoveColumns(#"Personalizada agregada",{"AñoProv", "Column1"}),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Columnas quitadas1",{{"Column2", "Ambos sexos"}, {"Column3", "Mujeres"}, {"Column4", "Hombres"}}),
+				    #"Filas superiores quitadas1" = Table.Skip(#"Columnas con nombre cambiado",2),
+				    #"Filas filtradas" = Table.SelectRows(#"Filas superiores quitadas1", each ([Hombres] <> null)),
+				    #"Otras columnas con anulación de dinamización" = Table.UnpivotOtherColumns(#"Filas filtradas", {"Fecha", "Actividad"}, "Sexo", "Salario"),
+				    #"Tipo cambiado1" = Table.TransformColumnTypes(#"Otras columnas con anulación de dinamización",{{"Actividad", type text}, {"Fecha", type date}, {"Sexo", type text}, {"Salario", type number}})
+				in
+				    #"Tipo cambiado1"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+
