@@ -1,0 +1,76 @@
+table MEDIA_SUELDOS_ANUALES
+	lineageTag: be815ed7-1f3b-4e48-a289-f1b6a9e8a614
+
+	column 'Salario Medio Anual'
+		dataType: double
+		lineageTag: 3011259e-fbeb-4125-b18a-32190ba59d84
+		summarizeBy: sum
+		sourceColumn: Salario Medio Anual
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CCAA
+		dataType: string
+		lineageTag: 236d65b1-50ae-41c9-854c-fea8c93d266f
+		summarizeBy: none
+		sourceColumn: CCAA
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sexo
+		dataType: string
+		lineageTag: 2ae042ec-f9de-4d40-9da3-3d9272e1957b
+		summarizeBy: none
+		sourceColumn: Sexo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fecha
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 823ee705-d419-4d12-a291-04bb63a3709c
+		summarizeBy: none
+		sourceColumn: Fecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition MEDIA_SUELDOS_ANUALES = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents("C:\Users\jaume\Documents\Porfolio\Dashboard_Datos_ES\raw_data\Media_sueldos_esp.xlsx"), null, true),
+				    #"tabla-1" = Origen{[Name="tabla-28191"]}[Data],
+				    #"Otras columnas quitadas" = Table.SelectColumns(#"tabla-1",{"Column1", "Column2"}),
+				    #"Filas superiores quitadas" = Table.Skip(#"Otras columnas quitadas",7),
+				    #"Filas inferiores quitadas" = Table.RemoveLastN(#"Filas superiores quitadas",7),
+				    #"Texto recortado" = Table.TransformColumns(#"Filas inferiores quitadas",{{"Column1", Text.Trim, type text}}),
+				    #"Columna condicional agregada" = Table.AddColumn(#"Texto recortado", "CCAA", each if [Column1] = "Total Nacional" then [Column1] else if [Column1] = "Andalucía" then [Column1] else if [Column1] = "Aragón" then [Column1] else if [Column1] = "Asturias, Principado de" then [Column1] else if [Column1] = "Balears, Illes" then [Column1] else if [Column1] = "Canarias" then [Column1] else if [Column1] = "Cantabria" then [Column1] else if [Column1] = "Castilla y León" then [Column1] else if [Column1] = "Castilla - La Mancha" then [Column1] else if [Column1] = "Cataluña" then [Column1] else if [Column1] = "Comunitat Valenciana" then [Column1] else if [Column1] = "Extremadura" then [Column1] else if [Column1] = "Galicia" then [Column1] else if [Column1] = "Madrid, Comunidad de" then [Column1] else if [Column1] = "Murcia, Región de" then [Column1] else if [Column1] = "Navarra, Comunidad Foral de" then [Column1] else if [Column1] = "País Vasco" then [Column1] else if [Column1] = "Rioja, La" then [Column1] else null),
+				    #"Rellenar hacia abajo" = Table.FillDown(#"Columna condicional agregada",{"CCAA"}),
+				    #"Valor reemplazado" = Table.ReplaceValue(#"Rellenar hacia abajo","Asturias, Principado de","Principado de Asturias",Replacer.ReplaceText,{"CCAA"}),
+				    #"Valor reemplazado1" = Table.ReplaceValue(#"Valor reemplazado","Balears, Illes","Illes Balears",Replacer.ReplaceText,{"CCAA"}),
+				    #"Valor reemplazado2" = Table.ReplaceValue(#"Valor reemplazado1","Madrid, Comunidad de","Comunidad de Madrid",Replacer.ReplaceText,{"CCAA"}),
+				    #"Valor reemplazado3" = Table.ReplaceValue(#"Valor reemplazado2","Murcia, Región de","Región de Murcia",Replacer.ReplaceText,{"CCAA"}),
+				    #"Valor reemplazado4" = Table.ReplaceValue(#"Valor reemplazado3","Navarra, Comunidad Foral de","Comunidad Foral de Navarra",Replacer.ReplaceText,{"CCAA"}),
+				    #"Valor reemplazado5" = Table.ReplaceValue(#"Valor reemplazado4","Rioja, La","La Rioja",Replacer.ReplaceText,{"CCAA"}),
+				    #"Columna condicional agregada1" = Table.AddColumn(#"Valor reemplazado5", "Sexo", each if [Column1] = "Ambos sexos" then [Column1] else if [Column1] = "Hombres" then [Column1] else if [Column1] = "Mujeres" then [Column1] else null),
+				    #"Rellenar hacia abajo1" = Table.FillDown(#"Columna condicional agregada1",{"Sexo"}),
+				    #"Columna condicional agregada2" = Table.AddColumn(#"Rellenar hacia abajo1", "Año", each if Text.StartsWith([Column1], "2") then [Column1] else null),
+				    #"Filas superiores quitadas1" = Table.Skip(#"Columna condicional agregada2",2),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Filas superiores quitadas1",{{"Column2", "Salario Medio Anual"}}),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Columnas con nombre cambiado",{"Column1"}),
+				    #"Filas filtradas" = Table.SelectRows(#"Columnas quitadas", each ([Salario Medio Anual] <> null)),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Filas filtradas",{{"Año", Int64.Type}}),
+				    #"Personalizada agregada" = Table.AddColumn(#"Tipo cambiado", "Fecha", each #date([Año], 1, 1)),
+				    #"Columnas quitadas1" = Table.RemoveColumns(#"Personalizada agregada",{"Año"}),
+				    #"Tipo cambiado1" = Table.TransformColumnTypes(#"Columnas quitadas1",{{"Salario Medio Anual", type number}, {"CCAA", type text}, {"Sexo", type text}, {"Fecha", type date}})
+				in
+				    #"Tipo cambiado1"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

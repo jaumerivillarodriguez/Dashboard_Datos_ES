@@ -37,7 +37,7 @@ table VIVIENDAS
 
 	column Fecha
 		dataType: dateTime
-		formatString: Long Date
+		formatString: Short Date
 		lineageTag: f1179770-69ed-4a39-8ec1-cd688c9744df
 		summarizeBy: none
 		sourceColumn: Fecha
