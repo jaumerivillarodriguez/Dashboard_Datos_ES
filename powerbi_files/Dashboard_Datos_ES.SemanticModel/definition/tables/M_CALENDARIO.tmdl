@@ -1,0 +1,91 @@
+table M_CALENDARIO
+	lineageTag: 3048ba3e-06a2-4045-b10c-ec32b927db32
+
+	column Fecha
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 06c3bc83-5683-4c99-9e47-74e2f177be80
+		summarizeBy: none
+		sourceColumn: Fecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Año
+		dataType: double
+		lineageTag: c86e6f6a-14f8-4cda-94b1-10f114b7c099
+		summarizeBy: sum
+		sourceColumn: Año
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Mes num'
+		dataType: double
+		lineageTag: 771492d8-5b99-4ad1-9775-c42fa6196b9a
+		summarizeBy: sum
+		sourceColumn: Mes num
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Mes Texto'
+		dataType: string
+		lineageTag: 40a59452-ee91-4c1c-9518-779e424ccd13
+		summarizeBy: none
+		sourceColumn: Mes Texto
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mes Abre'
+		dataType: string
+		lineageTag: 9af7298d-edd4-4cb4-9a73-92b9a9ae3b28
+		summarizeBy: none
+		sourceColumn: Mes Abre
+
+		annotation SummarizationSetBy = Automatic
+
+	column Q
+		dataType: string
+		lineageTag: d48193b1-111e-42fe-a3bd-2cd5962a67ac
+		summarizeBy: none
+		sourceColumn: Q
+
+		annotation SummarizationSetBy = Automatic
+
+	column Trim
+		dataType: string
+		lineageTag: 30bf240f-71d6-4073-ad58-9e6d3f9724db
+		summarizeBy: none
+		sourceColumn: Trim
+
+		annotation SummarizationSetBy = Automatic
+
+	partition M_CALENDARIO = m
+		mode: import
+		source =
+				let
+				    FechaInicio = Fecha_Minima,
+				    FechaFin = Fecha_Maxima,
+				
+				    NumeroDias = Duration.Days(FechaFin - FechaInicio) + 1,
+				    ListaFechas = List.Dates(FechaInicio, NumeroDias, #duration(1, 0, 0, 0)),
+				    #"Convertido a Tabla" = Table.FromList(ListaFechas, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+				    #"Renombrar Columnas" = Table.RenameColumns(#"Convertido a Tabla",{{"Column1", "Fecha"}}),
+				    #"Tipo Cambiado" = Table.TransformColumnTypes(#"Renombrar Columnas",{{"Fecha", type date}}),
+				    #"Año Agregado" = Table.AddColumn(#"Tipo Cambiado", "Año", each Date.Year([Fecha]), type number),
+				    #"Mes Num Agregado" = Table.AddColumn(#"Año Agregado", "Mes num", each Date.Month([Fecha]), type number),
+				    #"Mes Texto Agregado" = Table.AddColumn(#"Mes Num Agregado", "Mes Texto", each Date.ToText([Fecha], "MMMM", "es-ES"), type text),
+				    #"Mes Abre Agregado" = Table.AddColumn(#"Mes Texto Agregado", "Mes Abre", each Text.Replace(Date.ToText([Fecha], "MMM", "es-ES"), ".", ""), type text),
+				    #"Q Agregado" = Table.AddColumn(#"Mes Abre Agregado", "Q", each "Q" & Text.From(Number.RoundUp(Date.Month([Fecha]) / 3)), type text),
+				    #"Trimestre Agregado" = Table.AddColumn(#"Q Agregado", "Trim", each "T" & Text.From(Number.RoundUp(Date.Month([Fecha]) / 3)), type text)
+				in
+				    #"Trimestre Agregado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

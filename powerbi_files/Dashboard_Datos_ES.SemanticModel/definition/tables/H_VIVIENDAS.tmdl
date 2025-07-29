@@ -1,4 +1,4 @@
-table VIVIENDAS
+table H_VIVIENDAS
 	lineageTag: b412a3d9-5412-473c-a701-d2093a7e2a06
 
 	column CCAA
@@ -46,7 +46,7 @@ table VIVIENDAS
 
 		annotation UnderlyingDateTimeDataType = Date
 
-	partition VIVIENDAS = m
+	partition H_VIVIENDAS = m
 		mode: import
 		source =
 				let

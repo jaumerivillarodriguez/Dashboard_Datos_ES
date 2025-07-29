@@ -1,0 +1,32 @@
+expression Fecha_Maxima =
+		let
+		    MaxFechaViviendas = Table.Max(H_VIVIENDAS, "Fecha")[Fecha],
+		    MaxFechaMediaSueldos = Table.Max(H_MEDIA_SUELDOS_ANUALES, "Fecha")[Fecha],
+		    MaxFechaSueldosActividad = Table.Max(H_SUELDOS_POR_ACTIVIDAD, "Fecha")[Fecha],
+		    ListaFechas = {MaxFechaViviendas, MaxFechaMediaSueldos, MaxFechaSueldosActividad},
+		    MaxGlobal = List.Max(ListaFechas)
+		in
+		    MaxGlobal
+	lineageTag: ef146bd3-b651-4d77-9a63-4f9d7536f5bf
+	queryGroup: 'Fecha Max y Fecha Min'
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Date
+
+expression Fecha_Minima =
+		let
+		    MinFechaViviendas = Table.Min(H_VIVIENDAS, "Fecha")[Fecha],
+		    MinFechaMediaSueldos = Table.Min(H_MEDIA_SUELDOS_ANUALES, "Fecha")[Fecha],
+		    MinFechaSueldosActividad = Table.Min(H_SUELDOS_POR_ACTIVIDAD, "Fecha")[Fecha],
+		    ListaFechas = {MinFechaViviendas, MinFechaMediaSueldos, MinFechaSueldosActividad},
+		    MinGlobal = List.Min(ListaFechas)
+		in
+		    MinGlobal
+	lineageTag: 28019de4-9b23-44fa-90ce-a91797fd3d19
+	queryGroup: 'Fecha Max y Fecha Min'
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Date
+

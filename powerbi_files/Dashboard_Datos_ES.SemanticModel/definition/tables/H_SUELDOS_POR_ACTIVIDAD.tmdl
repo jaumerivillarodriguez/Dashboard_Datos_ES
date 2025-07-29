@@ -1,4 +1,4 @@
-table SUELDOS_POR_ACTIVIDAD
+table H_SUELDOS_POR_ACTIVIDAD
 	lineageTag: ac872c80-ca0d-460b-8459-7f772de93098
 
 	column Actividad
@@ -38,7 +38,7 @@ table SUELDOS_POR_ACTIVIDAD
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	partition SUELDOS_POR_ACTIVIDAD = m
+	partition H_SUELDOS_POR_ACTIVIDAD = m
 		mode: import
 		source =
 				let

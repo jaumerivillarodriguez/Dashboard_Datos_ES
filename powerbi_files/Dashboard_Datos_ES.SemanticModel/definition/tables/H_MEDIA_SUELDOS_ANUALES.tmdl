@@ -1,4 +1,4 @@
-table MEDIA_SUELDOS_ANUALES
+table H_MEDIA_SUELDOS_ANUALES
 	lineageTag: be815ed7-1f3b-4e48-a289-f1b6a9e8a614
 
 	column 'Salario Medio Anual'
@@ -38,7 +38,7 @@ table MEDIA_SUELDOS_ANUALES
 
 		annotation UnderlyingDateTimeDataType = Date
 
-	partition MEDIA_SUELDOS_ANUALES = m
+	partition H_MEDIA_SUELDOS_ANUALES = m
 		mode: import
 		source =
 				let
