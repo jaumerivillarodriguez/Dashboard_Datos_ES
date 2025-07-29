@@ -11,7 +11,7 @@ table SUELDOS_POR_ACTIVIDAD
 
 	column Fecha
 		dataType: dateTime
-		formatString: Long Date
+		formatString: Short Date
 		lineageTag: f6c7efe8-0c95-4c17-a383-9ced26fdc725
 		summarizeBy: none
 		sourceColumn: Fecha
