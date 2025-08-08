@@ -3,6 +3,7 @@ expression Fecha_Maxima =
 		    MaxFechaViviendas = Table.Max(H_VIVIENDAS, "Fecha")[Fecha],
 		    MaxFechaMediaSueldos = Table.Max(H_MEDIA_SUELDOS_ANUALES, "Fecha")[Fecha],
 		    MaxFechaSueldosActividad = Table.Max(H_SUELDOS_POR_ACTIVIDAD, "Fecha")[Fecha],
+		    MaxFechaSueldosEdad = Table.Max(H_MEDIA_SUELDOS_EDAD, "Fecha")[Fecha],
 		    ListaFechas = {MaxFechaViviendas, MaxFechaMediaSueldos, MaxFechaSueldosActividad},
 		    MaxGlobal = List.Max(ListaFechas)
 		in
@@ -19,6 +20,7 @@ expression Fecha_Minima =
 		    MinFechaViviendas = Table.Min(H_VIVIENDAS, "Fecha")[Fecha],
 		    MinFechaMediaSueldos = Table.Min(H_MEDIA_SUELDOS_ANUALES, "Fecha")[Fecha],
 		    MinFechaSueldosActividad = Table.Min(H_SUELDOS_POR_ACTIVIDAD, "Fecha")[Fecha],
+		    MinFechaSueldosEdad = Table.Min(H_MEDIA_SUELDOS_EDAD, "Fecha")[Fecha],
 		    ListaFechas = {MinFechaViviendas, MinFechaMediaSueldos, MinFechaSueldosActividad},
 		    MinGlobal = List.Min(ListaFechas)
 		in

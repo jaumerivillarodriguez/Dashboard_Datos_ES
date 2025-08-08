@@ -4,76 +4,53 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 0,
+        "x": 30,
         "y": 0
       },
       "nodes": [
         {
           "location": {
-            "x": 568,
-            "y": 0
+            "x": 618,
+            "y": 465
           },
           "nodeIndex": "H_VIVIENDAS",
+          "nodeLineageTag": "b412a3d9-5412-473c-a701-d2093a7e2a06",
           "size": {
-            "height": 300,
+            "height": 235,
             "width": 234
           },
           "zIndex": 0
         },
         {
           "location": {
-            "x": 0,
-            "y": 62
+            "x": 4,
+            "y": 483
           },
           "nodeIndex": "H_MEDIA_SUELDOS_ANUALES",
+          "nodeLineageTag": "be815ed7-1f3b-4e48-a289-f1b6a9e8a614",
           "size": {
-            "height": 176,
+            "height": 218,
             "width": 234
           },
           "zIndex": 0
         },
         {
           "location": {
-            "x": 284,
-            "y": 62
+            "x": 292,
+            "y": 470
           },
           "nodeIndex": "H_SUELDOS_POR_ACTIVIDAD",
+          "nodeLineageTag": "ac872c80-ca0d-460b-8459-7f772de93098",
           "size": {
-            "height": 176,
+            "height": 225,
             "width": 234
           },
           "zIndex": 0
         },
         {
           "location": {
-            "x": 852,
-            "y": 98
-          },
-          "nodeIndex": "Fecha_Maxima",
-          "nodeLineageTag": "294ca428-718d-4d46-9ced-d0338eb41a28",
-          "size": {
-            "height": 104,
-            "width": 234
-          },
-          "zIndex": 0
-        },
-        {
-          "location": {
-            "x": 1136,
-            "y": 98
-          },
-          "nodeIndex": "Fecha_Minima",
-          "nodeLineageTag": "a6b13d50-7109-4a9e-857e-bf3d1523a9a6",
-          "size": {
-            "height": 104,
-            "width": 234
-          },
-          "zIndex": 0
-        },
-        {
-          "location": {
-            "x": 1420,
-            "y": 26
+            "x": 499,
+            "y": 0
           },
           "nodeIndex": "M_CALENDARIO",
           "nodeLineageTag": "3048ba3e-06a2-4045-b10c-ec32b927db32",
@@ -82,10 +59,36 @@
             "width": 234
           },
           "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1250,
+            "y": 0
+          },
+          "nodeIndex": "_Medidas",
+          "nodeLineageTag": "330ae00d-ca5a-491d-9502-f814776c8591",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 894,
+            "y": 461.5
+          },
+          "nodeIndex": "H_MEDIA_SUELDOS_EDAD",
+          "nodeLineageTag": "32b88ee7-875d-4ef6-a03b-31677ad04b26",
+          "size": {
+            "height": 238,
+            "width": 277
+          },
+          "zIndex": 0
         }
       ],
       "name": "Todas las tablas",
-      "zoomValue": 100,
+      "zoomValue": 90,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,

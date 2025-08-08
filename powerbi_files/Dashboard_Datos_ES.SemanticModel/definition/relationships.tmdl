@@ -1,0 +1,16 @@
+relationship 275dd1ae-5fe4-b632-39b9-41416801cc57
+	fromColumn: H_MEDIA_SUELDOS_ANUALES.Fecha
+	toColumn: M_CALENDARIO.Fecha
+
+relationship c9c5070b-4c79-d151-ba02-7dd801cdd202
+	fromColumn: H_SUELDOS_POR_ACTIVIDAD.Fecha
+	toColumn: M_CALENDARIO.Fecha
+
+relationship 1bb4ade4-7c29-afa8-498b-e1454eeeb473
+	fromColumn: H_VIVIENDAS.Fecha
+	toColumn: M_CALENDARIO.Fecha
+
+relationship 0ba363e3-4643-47c1-5448-4f164fd2cdeb
+	fromColumn: H_MEDIA_SUELDOS_EDAD.Fecha
+	toColumn: M_CALENDARIO.Fecha
+

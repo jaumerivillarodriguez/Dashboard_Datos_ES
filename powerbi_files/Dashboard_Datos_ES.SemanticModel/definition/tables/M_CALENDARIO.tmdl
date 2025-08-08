@@ -3,7 +3,7 @@ table M_CALENDARIO
 
 	column Fecha
 		dataType: dateTime
-		formatString: Long Date
+		formatString: Short Date
 		lineageTag: 06c3bc83-5683-4c99-9e47-74e2f177be80
 		summarizeBy: none
 		sourceColumn: Fecha

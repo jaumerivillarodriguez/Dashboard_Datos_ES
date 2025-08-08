@@ -1,0 +1,77 @@
+table H_MEDIA_SUELDOS_EDAD
+	lineageTag: 32b88ee7-875d-4ef6-a03b-31677ad04b26
+
+	column Año
+		dataType: int64
+		formatString: 0
+		lineageTag: 24aea37a-136f-4865-9107-be2574f617a3
+		summarizeBy: sum
+		sourceColumn: Año
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Rango edad'
+		dataType: string
+		lineageTag: 7b7decc1-4a63-4e54-8d24-d757f8daff13
+		summarizeBy: none
+		sourceColumn: Rango edad
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sexo
+		dataType: string
+		lineageTag: 0aa0795d-ce71-4cf9-9b85-f5158f637452
+		summarizeBy: none
+		sourceColumn: Sexo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Salario medio anual'
+		dataType: double
+		lineageTag: 4f2391d5-1ed1-4684-b82c-b8a6d7fc3da1
+		summarizeBy: sum
+		sourceColumn: Salario medio anual
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Fecha
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 60b59be4-307d-406c-b307-17194047d52b
+		summarizeBy: none
+		sourceColumn: Fecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition H_MEDIA_SUELDOS_EDAD = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents("C:\Users\jaume\Documents\Porfolio\Dashboard_Datos_ES\raw_data\Media sueldos por edad y sexo.xlsx"), null, true),
+				    #"tabla-1" = Origen{[Name="tabla-28189"]}[Data],
+				    #"Otras columnas quitadas" = Table.SelectColumns(#"tabla-1",{"Column1", "Column2", "Column3", "Column4"}),
+				    #"Filas superiores quitadas" = Table.Skip(#"Otras columnas quitadas",6),
+				    #"Filas inferiores quitadas" = Table.RemoveLastN(#"Filas superiores quitadas",9),
+				    #"Texto recortado" = Table.TransformColumns(#"Filas inferiores quitadas",{{"Column1", Text.Trim, type text}}),
+				    #"Columna condicional agregada" = Table.AddColumn(#"Texto recortado", "Año", each if Text.StartsWith([Column1], "2") then [Column1] else null),
+				    #"Columna condicional agregada1" = Table.AddColumn(#"Columna condicional agregada", "Rango Edad", each if not Text.StartsWith([Column1], "2") then [Column1] else null),
+				    #"Rellenar hacia abajo" = Table.FillDown(#"Columna condicional agregada1",{"Rango Edad"}),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Rellenar hacia abajo",{"Column1"}),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(#"Columnas quitadas", [PromoteAllScalars=true]),
+				    #"Valor reemplazado" = Table.ReplaceValue(#"Encabezados promovidos","..",null,Replacer.ReplaceValue,{"Mujeres", "Hombres"}),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Valor reemplazado",{{"Mujeres", type number}, {"Ambos sexos", type number}, {"Hombres", type number}, {"Column4", Int64.Type}}),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Tipo cambiado",{{"Column4", "Año"}, {"", "Rango edad"}}),
+				    #"Otras columnas con anulación de dinamización" = Table.UnpivotOtherColumns(#"Columnas con nombre cambiado", {"Rango edad", "Año"}, "Sexo", "Salario medio anual"),
+				    #"Personalizada agregada" = Table.AddColumn(#"Otras columnas con anulación de dinamización", "Fecha", each #date([Año], 1, 1)),
+				    #"Tipo cambiado1" = Table.TransformColumnTypes(#"Personalizada agregada",{{"Fecha", type date}, {"Rango edad", type text}})
+				in
+				    #"Tipo cambiado1"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+
