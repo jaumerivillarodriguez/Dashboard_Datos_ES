@@ -13,12 +13,14 @@ table M_CALENDARIO
 		annotation UnderlyingDateTimeDataType = Date
 
 	column Año
-		dataType: double
+		dataType: int64
 		lineageTag: c86e6f6a-14f8-4cda-94b1-10f114b7c099
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Año
 
-		annotation SummarizationSetBy = Automatic
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = User
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 

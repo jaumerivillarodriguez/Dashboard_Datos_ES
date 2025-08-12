@@ -14,3 +14,23 @@ relationship 0ba363e3-4643-47c1-5448-4f164fd2cdeb
 	fromColumn: H_MEDIA_SUELDOS_EDAD.Fecha
 	toColumn: M_CALENDARIO.Fecha
 
+relationship b196ec55-14ac-5813-ad2f-9daa16bfb04c
+	fromColumn: H_VIVIENDAS.CCAA
+	toColumn: M_CCAA.CCAA
+
+relationship 38470680-e2a5-94a8-0e76-353b0fb2e041
+	fromColumn: H_MEDIA_SUELDOS_ANUALES.CCAA
+	toColumn: M_CCAA.CCAA
+
+relationship 33eec39a-fa01-3813-f3b9-5a5ebbfa051a
+	fromColumn: H_MEDIA_SUELDOS_ANUALES.Sexo
+	toColumn: M_SEXO.Sexo
+
+relationship f94179aa-2f43-db3c-6dea-a50ab98311b6
+	fromColumn: H_SUELDOS_POR_ACTIVIDAD.Sexo
+	toColumn: M_SEXO.Sexo
+
+relationship 75285f9b-2a1b-0adc-9ebc-96347fb08402
+	fromColumn: H_MEDIA_SUELDOS_EDAD.Sexo
+	toColumn: M_SEXO.Sexo
+

@@ -1,0 +1,28 @@
+table M_CCAA
+	lineageTag: bff33f9c-13cd-4ffe-8ddf-f060dcb67fca
+
+	column CCAA
+		dataType: string
+		lineageTag: fb8a1903-cf7f-4d65-b6af-4dbbc8f3c09b
+		summarizeBy: none
+		sourceColumn: CCAA
+
+		annotation SummarizationSetBy = Automatic
+
+	partition M_CCAA = m
+		mode: import
+		source =
+				let
+				    C1 = Table.SelectColumns(H_MEDIA_SUELDOS_ANUALES, {"CCAA"}),
+				    C2 = Table.SelectColumns(H_VIVIENDAS, {"CCAA"}),
+				    Append = Table.Combine({C1, C2}),
+				    Trimmed = Table.TransformColumns(Append, {{"CCAA", each Text.Trim(_), type text}}),
+				    Distinct = Table.Distinct(Trimmed),
+				    Sorted = Table.Sort(Distinct, {{"CCAA", Order.Ascending}})
+				in
+				    Sorted
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

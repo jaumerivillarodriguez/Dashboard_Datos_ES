@@ -1,200 +1,243 @@
 table _Medidas
-	lineageTag: 330ae00d-ca5a-491d-9502-f814776c8591
+	lineageTag: 662da2b8-bb3e-41d1-ac0b-e37aa6cf9e49
 
-	measure IPV_Medio_Indice =
+	measure '_Ambos sexos aux' = ```
 			
-			CALCULATE(
-			    AVERAGE(H_VIVIENDAS[Valor]),
-			    H_VIVIENDAS[Indicador] = "Índice",
-			    H_VIVIENDAS[Tipo Vivienda] = "General"
-			)
-		displayFolder: Vivienda
-		lineageTag: 1307440d-c948-42bf-a875-f3a2fece623c
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure IPV_ViviendaNueva_Indice =
-			
-			CALCULATE(
-			    AVERAGE(H_VIVIENDAS[Valor]),
-			    H_VIVIENDAS[Indicador] = "Índice",
-			    H_VIVIENDAS[Tipo Vivienda] = "Vivienda nueva"
-			)
-		displayFolder: Vivienda
-		lineageTag: 1bace9ac-1357-4ee5-a515-2c9f848c8e98
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure IPV_Vivienda2aMano_Indice =
-			
-			CALCULATE(
-			    AVERAGE(H_VIVIENDAS[Valor]),
-			    H_VIVIENDAS[Indicador] = "Índice",
-			    H_VIVIENDAS[Tipo Vivienda] = "Vivienda segunda mano"
-			)
-		displayFolder: Vivienda
-		lineageTag: 18186a85-ee0a-4dfa-b278-2709e84ef95d
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure IPV_Variacion_Anual =
-			
-			CALCULATE(
-			    AVERAGE(H_VIVIENDAS[Valor]),
-			    H_VIVIENDAS[Indicador] = "Variación anual"
-			)
-		displayFolder: Vivienda
-		lineageTag: 02f47feb-67c0-4bc3-9513-87f83ebdd98c
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure IPV_Variacion_Trimestral =
-			
-			CALCULATE(
-			    AVERAGE(H_VIVIENDAS[Valor]),
-			    H_VIVIENDAS[Indicador] = "Variación trimestral"
-			)
-		displayFolder: Vivienda
-		lineageTag: 7ac69152-8856-490f-ba4b-9c5db70d488f
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure Salario_Medio_CCAA =
-			
-			AVERAGE(H_MEDIA_SUELDOS_ANUALES[Salario Medio Anual])
-		displayFolder: Salarios
-		lineageTag: 6afda351-4556-4301-936b-ed7b336851ac
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure Salario_Medio_CCAA_AmbosSexos =
-			
-			CALCULATE(
-			    [Salario_Medio_CCAA],
-			    H_MEDIA_SUELDOS_ANUALES[Sexo] = "Ambos sexos"
-			)
-		displayFolder: Salarios
-		lineageTag: ead263b4-026a-4526-b9f2-c10b30bec0ab
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure Salario_Medio_CCAA_Hombres =
-			
-			CALCULATE(
-			    [Salario_Medio_CCAA],
-			    H_MEDIA_SUELDOS_ANUALES[Sexo] = "Hombres"
-			)
-		displayFolder: Salarios
-		lineageTag: 33a506ba-b6a0-4a97-9238-3f14dde94d1a
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure Salario_Medio_CCAA_Mujeres =
-			
-			CALCULATE(
-			    [Salario_Medio_CCAA],
-			    H_MEDIA_SUELDOS_ANUALES[Sexo] = "Mujeres"
-			)
-		displayFolder: Salarios
-		lineageTag: 4a6f5067-55b8-4c59-a872-edfc22286c55
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure Salario_Medio_Actividad =
-			
-			AVERAGE(H_SUELDOS_POR_ACTIVIDAD[Salario])
-		displayFolder: Salarios
-		lineageTag: cacec26b-41d5-45d9-bf4d-3806592ac940
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure Salario_Medio_Actividad_AmbosSexos =
-			
-			CALCULATE(
-			    [Salario_Medio_Actividad],
-			    H_SUELDOS_POR_ACTIVIDAD[Sexo] = "Ambos sexos"
-			)
-		displayFolder: Salarios
-		lineageTag: 4ff716ec-70ff-43e2-93c2-7b28a1ce92a4
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure Salario_Medio_Actividad_Hombres =
-			
-			CALCULATE(
-			    [Salario_Medio_Actividad],
-			    H_SUELDOS_POR_ACTIVIDAD[Sexo] = "Hombres"
-			)
-		displayFolder: Salarios
-		lineageTag: 01933a36-5f01-4de4-8545-7182328efdc3
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure Salario_Medio_Actividad_Mujeres =
-			
-			CALCULATE(
-			    [Salario_Medio_Actividad],
-			    H_SUELDOS_POR_ACTIVIDAD[Sexo] = "Mujeres"
-			)
-		displayFolder: Salarios
-		lineageTag: c8886e40-668d-41a8-bb91-0caae64596ca
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure Ratio_Salario_IPV_General = ```
-			
-			DIVIDE(
-			    [Salario_Medio_CCAA_AmbosSexos],
-			    [IPV_Medio_Indice],
-			    BLANK() 
-			)
+			    SELECTEDVALUE(M_SEXO[EsTotal]) = TRUE()
 			```
-		displayFolder: Salario / Vivienda
-		lineageTag: 8a09f149-7e95-48db-aecd-6d3c92bc3558
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		displayFolder: _Auxiliares
+		lineageTag: dd7d60d6-580f-4083-8510-dc4bd348dfe5
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure Variacion_Anual_Salario_CCAA = ```
+	measure '_Año base indice aux' = ```
 			
-			VAR CurrentYearSal = [Salario_Medio_CCAA_AmbosSexos]
-			VAR PreviousYearSal = 
+			VAR hay2015 =
 			    CALCULATE(
-			        [Salario_Medio_CCAA_AmbosSexos],
-			        SAMEPERIODLASTYEAR('M_CALENDARIO'[Fecha])
-			    )
+			        COUNTROWS(M_CALENDARIO),
+			        ALL (M_CALENDARIO), M_CALENDARIO[Año] = 2015     )
+			
 			RETURN 
-			    DIVIDE(CurrentYearSal - PreviousYearSal, PreviousYearSal, BLANK())
+			    IF (hay2015 > 0,
+			        2015,
+			         CALCULATE(
+			            MIN(M_CALENDARIO[Año]),
+			            ALL(M_CALENDARIO)
+			        )
+			    )
 			```
-		displayFolder: Salario / Vivienda
-		lineageTag: 1c70ff33-46ad-46a3-9e44-eab0ee1b1573
+		displayFolder: _Auxiliares
+		lineageTag: 915d2f23-d8d7-43f6-acf3-7014f3be0698
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure Variacion_Anual_IPV_Calculada = ```
+	measure 'Salario medio (anuales)' =
 			
-			VAR CurrentYearIPV = [IPV_Medio_Indice]
-			VAR PreviousYearIPV = 
+			VAR noSexoSel = NOT ISFILTERED(M_SEXO[Sexo])            -- TRUE si no hay filtro de sexo
+			VAR noCCAA_Sel = NOT ISFILTERED(M_CCAA[CCAA])           -- TRUE si no hay filtro de CCAA
+			VAR isTotalSel = [_Ambos sexos aux]                     -- TRUE si el filtro actual es Ambos sexos
+			RETURN
+			IF(
+			    noSexoSel || isTotalSel || noCCAA_Sel,               -- Si no hay selección de sexo, o es Ambos, o no hay CCAA
 			    CALCULATE(
-			        [IPV_Medio_Indice],
-			        SAMEPERIODLASTYEAR('M_CALENDARIO'[Fecha])
+			        AVERAGE(H_MEDIA_SUELDOS_ANUALES[Salario Medio Anual]),
+			        KEEPFILTERS(M_SEXO[EsTotal] = TRUE()),          -- fuerza Ambos sexos
+			        KEEPFILTERS(M_CCAA[CCAA] = "Total Nacional")          -- fuerza Nacional
+			    ),
+			    CALCULATE(
+			        AVERAGE(H_MEDIA_SUELDOS_ANUALES[Salario Medio Anual]),
+			        KEEPFILTERS(M_SEXO[EsTotal] = FALSE()),         -- si hay H o M, excluye Ambos sexos
+			        KEEPFILTERS(M_CCAA[CCAA] <> "Total Nacional")         -- excluye Nacional si está seleccionada
+			    )
+			)
+		displayFolder: Salarios / Vivienda\Salarios
+		lineageTag: 7d460efd-1d02-4c10-ad7b-086a2c7ea945
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Salario medio H (anuales)' =
+			
+			VAR noCCAASel = NOT ISFILTERED(M_CCAA[CCAA])
+			RETURN
+			IF(
+			    noCCAASel,
+			    CALCULATE(
+			        AVERAGE(H_MEDIA_SUELDOS_ANUALES[Salario Medio Anual]),
+			        REMOVEFILTERS(M_SEXO),
+			        KEEPFILTERS(H_MEDIA_SUELDOS_ANUALES[Sexo] = "Hombres"),
+			        KEEPFILTERS(M_CCAA[CCAA] = "Total Nacional")   -- por defecto, Nacional
+			    ),
+			    CALCULATE(
+			        AVERAGE(H_MEDIA_SUELDOS_ANUALES[Salario Medio Anual]),
+			        REMOVEFILTERS(M_SEXO),
+			        KEEPFILTERS(H_MEDIA_SUELDOS_ANUALES[Sexo] = "Hombres"),
+			        KEEPFILTERS(M_CCAA[CCAA] <> "Total Nacional")  -- si el usuario elige CCAA y además está Nacional, se excluye
+			    )
+			)
+		displayFolder: Salarios / Vivienda\Salarios
+		lineageTag: 0e836ea6-29d5-4415-9aac-4a09b82d2a5b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Salario medio M (anuales)' = ```
+			
+			VAR noCCAASel = NOT ISFILTERED(M_CCAA[CCAA])
+			RETURN
+			IF(
+			    noCCAASel,
+			    CALCULATE(
+			        AVERAGE(H_MEDIA_SUELDOS_ANUALES[Salario Medio Anual]),
+			        REMOVEFILTERS(M_SEXO),
+			        KEEPFILTERS(H_MEDIA_SUELDOS_ANUALES[Sexo] = "Mujeres"),
+			        KEEPFILTERS(M_CCAA[CCAA] = "Total Nacional")   -- por defecto, Nacional
+			    ),
+			    CALCULATE(
+			        AVERAGE(H_MEDIA_SUELDOS_ANUALES[Salario Medio Anual]),
+			        REMOVEFILTERS(M_SEXO),
+			        KEEPFILTERS(H_MEDIA_SUELDOS_ANUALES[Sexo] = "Mujeres"),
+			        KEEPFILTERS(M_CCAA[CCAA] <> "Total Nacional")  -- si el usuario elige CCAA y además está Nacional, se excluye
+			    )
+			)
+			
+			```
+		displayFolder: Salarios / Vivienda\Salarios
+		lineageTag: 185657be-59be-48b5-a41a-a99f2e9fba39
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Brecha € (anuales)' = ```
+			
+			[Salario medio H (anuales)] - [Salario medio M (anuales)]
+			
+			```
+		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
+		displayFolder: Salarios / Vivienda\Salarios
+		lineageTag: 3014414a-8eaa-4047-b209-1be52050a60d
+
+	measure 'Brecha % (anuales)' = ```
+			
+			DIVIDE([Brecha € (anuales)], [Salario medio H (anuales)])
+			
+			```
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Salarios / Vivienda\Salarios
+		lineageTag: 79190d9e-23cf-4cc2-b6e9-11b3b16d91ed
+
+	measure 'Índice salario (2015->100)' = ```
+			
+			VAR baseYear = [_Año base indice aux]
+			VAR baseVal =
+			    CALCULATE(
+			        [Salario medio (anuales)],
+			        ALL(M_CALENDARIO),                     -- ignora tiempo para ir al año base
+			        M_CALENDARIO[Año] = baseYear
 			    )
 			RETURN
-			    DIVIDE(CurrentYearIPV - PreviousYearIPV, PreviousYearIPV, BLANK())
+			DIVIDE([Salario medio (anuales)], baseVal) * 100
+			
 			```
-		displayFolder: Salario / Vivienda
-		lineageTag: 24cc5c41-5e1b-4c0f-93a5-b458105a49e4
+		displayFolder: Salarios / Vivienda\Salarios
+		lineageTag: 1041d8ae-7e2e-4ab2-af10-125de0c7b584
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Salario medio (edad)' = ```
+			
+			VAR noSexoSel  = NOT ISFILTERED(M_SEXO[Sexo])
+			VAR isAmbosSel = [_Ambos sexos aux]
+			RETURN
+			IF(
+			    noSexoSel || isAmbosSel,                           -- por defecto: Ambos sexos
+			    CALCULATE(
+			        AVERAGE(H_MEDIA_SUELDOS_EDAD[Salario medio anual]),
+			        KEEPFILTERS(M_SEXO[EsTotal] = TRUE())
+			    ),
+			    CALCULATE(                                         -- si eligen H o M, excluye la fila agregada
+			        AVERAGE(H_MEDIA_SUELDOS_EDAD[Salario medio anual]),
+			        KEEPFILTERS(M_SEXO[EsTotal] = FALSE())
+			    )
+			)
+			
+			```
+		displayFolder: Salarios / Vivienda\Salarios
+		lineageTag: 127892bf-3394-456c-ac66-3cbd1dcc3ebf
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Salario medio (actividad)' =
+			
+			VAR noSexoSel  = NOT ISFILTERED(M_SEXO[Sexo])
+			VAR isAmbosSel = [_Ambos sexos aux]
+			RETURN
+			IF(
+			    noSexoSel || isAmbosSel,                           -- por defecto: Ambos sexos
+			    CALCULATE(
+			        AVERAGE(H_SUELDOS_POR_ACTIVIDAD[Salario]),
+			        KEEPFILTERS(M_SEXO[EsTotal] = TRUE())
+			    ),
+			    CALCULATE(                                         -- si eligen H o M, excluye la fila agregada
+			        AVERAGE(H_SUELDOS_POR_ACTIVIDAD[Salario]),
+			        KEEPFILTERS(M_SEXO[EsTotal] = FALSE())
+			    )
+			)
+		displayFolder: Salarios / Vivienda\Salarios
+		lineageTag: 8802c282-0128-4723-bf7b-dd52da9fb8fb
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% IPV variación desde 2015' = ```
+			
+			VAR tipoSel =
+			    SELECTEDVALUE(H_VIVIENDAS[Tipo Vivienda], "General")
+			VAR base2015 =
+			    CALCULATE(
+			        AVERAGE(H_VIVIENDAS[Valor]),        -- media de los trimestres de 2015
+			        ALL(M_CALENDARIO),                  -- ignora tiempo para ir a 2015
+			        M_CALENDARIO[Año] = 2015,
+			        KEEPFILTERS(H_VIVIENDAS[Indicador] = "Índice"),
+			        KEEPFILTERS(H_VIVIENDAS[Tipo Vivienda] = tipoSel)
+			        -- CCAA se toma del slicer (dinámico)
+			    )
+			VAR currentVal =
+			    CALCULATE(
+			        AVERAGE(H_VIVIENDAS[Valor]),
+			        KEEPFILTERS(H_VIVIENDAS[Indicador] = "Índice"),
+			        KEEPFILTERS(H_VIVIENDAS[Tipo Vivienda] = tipoSel)
+			    )
+			RETURN
+			DIVIDE(currentVal - base2015, base2015) 
+			
+			```
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Salarios / Vivienda\Vivienda
+		lineageTag: ca0320d7-e212-4ca5-ab1d-4af1b9eedb5e
+
+	measure '% Salario variación desde 2015' = ```
+			
+			VAR baseVal =
+			    CALCULATE(
+			        [Salario medio (anuales)],
+			        ALL(M_CALENDARIO),             -- ignora filtros de tiempo para ir a 2015
+			        M_CALENDARIO[Año] = 2015
+			    )
+			RETURN
+			DIVIDE([Salario medio (anuales)] - baseVal, baseVal)
+			
+			
+			
+			```
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Salarios / Vivienda\Salarios
+		lineageTag: 85fcffe0-e650-4fd9-bac6-2181e49e33ec
 
 	partition _Medidas = m
 		mode: import
 		source =
 				let
-				    Origen = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Columna1 = _t]),
-				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Columna1", type text}}),
-				    #"Columnas quitadas" = Table.RemoveColumns(#"Tipo cambiado",{"Columna1"})
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Column1"})
 				in
-				    #"Columnas quitadas"
+				    #"Removed Columns"
 
 	annotation PBI_ResultType = Table
 
