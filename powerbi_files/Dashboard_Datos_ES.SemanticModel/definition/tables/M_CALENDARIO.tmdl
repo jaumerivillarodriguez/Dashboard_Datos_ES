@@ -39,6 +39,9 @@ table M_CALENDARIO
 		lineageTag: 40a59452-ee91-4c1c-9518-779e424ccd13
 		summarizeBy: none
 		sourceColumn: Mes Texto
+		sortByColumn: 'Mes num'
+
+		changedProperty = SortByColumn
 
 		annotation SummarizationSetBy = Automatic
 
@@ -47,6 +50,9 @@ table M_CALENDARIO
 		lineageTag: 9af7298d-edd4-4cb4-9a73-92b9a9ae3b28
 		summarizeBy: none
 		sourceColumn: Mes Abre
+		sortByColumn: 'Mes num'
+
+		changedProperty = SortByColumn
 
 		annotation SummarizationSetBy = Automatic
 

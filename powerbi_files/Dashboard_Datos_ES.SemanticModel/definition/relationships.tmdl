@@ -34,3 +34,7 @@ relationship 75285f9b-2a1b-0adc-9ebc-96347fb08402
 	fromColumn: H_MEDIA_SUELDOS_EDAD.Sexo
 	toColumn: M_SEXO.Sexo
 
+relationship 0e8bb8cb-b659-9629-a88c-dbbbdaa52187
+	fromColumn: H_IPC.Fecha
+	toColumn: M_CALENDARIO.Fecha
+

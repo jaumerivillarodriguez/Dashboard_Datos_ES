@@ -49,7 +49,7 @@ table _Medidas
 			        KEEPFILTERS(M_CCAA[CCAA] <> "Total Nacional")         -- excluye Nacional si está seleccionada
 			    )
 			)
-		displayFolder: Salarios / Vivienda\Salarios
+		displayFolder: Salarios / Vivienda / IPC\Salarios
 		lineageTag: 7d460efd-1d02-4c10-ad7b-086a2c7ea945
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -73,7 +73,7 @@ table _Medidas
 			        KEEPFILTERS(M_CCAA[CCAA] <> "Total Nacional")  -- si el usuario elige CCAA y además está Nacional, se excluye
 			    )
 			)
-		displayFolder: Salarios / Vivienda\Salarios
+		displayFolder: Salarios / Vivienda / IPC\Salarios
 		lineageTag: 0e836ea6-29d5-4415-9aac-4a09b82d2a5b
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -99,7 +99,7 @@ table _Medidas
 			)
 			
 			```
-		displayFolder: Salarios / Vivienda\Salarios
+		displayFolder: Salarios / Vivienda / IPC\Salarios
 		lineageTag: 185657be-59be-48b5-a41a-a99f2e9fba39
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -110,7 +110,7 @@ table _Medidas
 			
 			```
 		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
-		displayFolder: Salarios / Vivienda\Salarios
+		displayFolder: Salarios / Vivienda / IPC\Salarios
 		lineageTag: 3014414a-8eaa-4047-b209-1be52050a60d
 
 	measure 'Brecha % (anuales)' = ```
@@ -119,7 +119,7 @@ table _Medidas
 			
 			```
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
-		displayFolder: Salarios / Vivienda\Salarios
+		displayFolder: Salarios / Vivienda / IPC\Salarios
 		lineageTag: 79190d9e-23cf-4cc2-b6e9-11b3b16d91ed
 
 	measure 'Índice salario (2015->100)' = ```
@@ -135,7 +135,7 @@ table _Medidas
 			DIVIDE([Salario medio (anuales)], baseVal) * 100
 			
 			```
-		displayFolder: Salarios / Vivienda\Salarios
+		displayFolder: Salarios / Vivienda / IPC\Salarios
 		lineageTag: 1041d8ae-7e2e-4ab2-af10-125de0c7b584
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -158,7 +158,7 @@ table _Medidas
 			)
 			
 			```
-		displayFolder: Salarios / Vivienda\Salarios
+		displayFolder: Salarios / Vivienda / IPC\Salarios
 		lineageTag: 127892bf-3394-456c-ac66-3cbd1dcc3ebf
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -179,7 +179,7 @@ table _Medidas
 			        KEEPFILTERS(M_SEXO[EsTotal] = FALSE())
 			    )
 			)
-		displayFolder: Salarios / Vivienda\Salarios
+		displayFolder: Salarios / Vivienda / IPC\Salarios
 		lineageTag: 8802c282-0128-4723-bf7b-dd52da9fb8fb
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -208,26 +208,72 @@ table _Medidas
 			
 			```
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
-		displayFolder: Salarios / Vivienda\Vivienda
+		displayFolder: Salarios / Vivienda / IPC\Vivienda
 		lineageTag: ca0320d7-e212-4ca5-ab1d-4af1b9eedb5e
 
-	measure '% Salario variación desde 2015' = ```
+	measure '% Salario variación desde 2015' =
 			
-			VAR baseVal =
+			VAR lastYear = [_Ultimo año salario]
+			VAR ctxYear  = MAX(M_CALENDARIO[Año])                          -- funciona tanto si el eje es Año como Mes
+			VAR baseVal  =
 			    CALCULATE(
 			        [Salario medio (anuales)],
-			        ALL(M_CALENDARIO),             -- ignora filtros de tiempo para ir a 2015
+			        ALL(M_CALENDARIO),
 			        M_CALENDARIO[Año] = 2015
 			    )
 			RETURN
-			DIVIDE([Salario medio (anuales)] - baseVal, baseVal)
-			
-			
-			
-			```
+			IF(
+			    ctxYear > lastYear,
+			    BLANK(),                                                   -- oculta puntos > último año con datos
+			    DIVIDE([Salario medio (anuales)] - baseVal, baseVal)
+			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
-		displayFolder: Salarios / Vivienda\Salarios
+		displayFolder: Salarios / Vivienda / IPC\Salarios
 		lineageTag: 85fcffe0-e650-4fd9-bac6-2181e49e33ec
+
+	measure '% IPC variación desde 2015' =
+			
+			VAR base2015 =
+			    CALCULATE(
+			        AVERAGE(H_IPC[Índice general]),      -- media de los 12 meses de 2015
+			        ALL(M_CALENDARIO), M_CALENDARIO[Año] = 2015
+			    )
+			RETURN
+			DIVIDE(
+			    AVERAGE(H_IPC[Índice general]) - base2015,  -- diferencia vs 2015
+			    base2015                                    -- normaliza a base
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Salarios / Vivienda / IPC\IPC
+		lineageTag: 94c5f2af-42e2-4141-8650-7e63ae4e1da7
+
+	measure '% Salario real variación desde 2015' =
+			
+			VAR lastYear = [_Ultimo año salario]
+			VAR ctxYear  = MAX(M_CALENDARIO[Año])
+			RETURN
+			IF(
+			    ctxYear > lastYear,
+			    BLANK(),
+			    [% Salario variación desde 2015] - [% IPC variación desde 2015]
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Salarios / Vivienda / IPC\Salarios
+		lineageTag: 1ab71039-4e05-4d43-9ff3-1f6dd7e9759f
+
+	measure '_Ultimo año salario' =
+			
+			MAXX(
+			    FILTER(
+			        ALL(M_CALENDARIO),
+			        NOT ISBLANK( CALCULATE([Salario medio (anuales)]) )   -- sólo años con dato real
+			    ),
+			    M_CALENDARIO[Año]
+			)
+			-- Encuentra el último año con salario disponible (dinámico por filtros de CCAA/sexo)
+		formatString: 0
+		displayFolder: _Auxiliares
+		lineageTag: de7cbaac-1a62-4d68-9e19-ae7fd9e619fb
 
 	partition _Medidas = m
 		mode: import

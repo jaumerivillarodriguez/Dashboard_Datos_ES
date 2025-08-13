@@ -1,0 +1,65 @@
+table H_IPC
+	lineageTag: 5408f055-d44e-4262-884d-d4246889550f
+
+	column Fecha
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 3ed63355-9249-476c-8088-ff989758ad3e
+		summarizeBy: none
+		sourceColumn: Fecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Índice general'
+		dataType: double
+		lineageTag: 0fdfea69-fad1-461a-b2b1-5c55b0438645
+		summarizeBy: sum
+		sourceColumn: Índice general
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition H_IPC = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\jaume\Documents\Porfolio\Dashboard_Datos_ES\raw_data\IPC.xlsx"), null, true),
+				    #"tabla-1" = Source{[Name="tabla-50902"]}[Data],
+				    #"Removed Top Rows" = Table.Skip(#"tabla-1", 6),
+				    #"Removed Bottom Rows" = Table.RemoveLastN(#"Removed Top Rows", 6),
+				
+				    // Usar la primera fila como encabezados
+				    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Bottom Rows", [PromoteAllScalars=true]),
+				    #"Filtered Rows" = Table.SelectRows(#"Promoted Headers", each ([#" "] = " " or [#" "] = "    Índice general")),
+				    #"Trimmed Text" = Table.TransformColumns(#"Filtered Rows",{{" ", Text.Trim, type text}}),
+				    #"Transposed Table" = Table.Transpose(#"Trimmed Text"),
+				    #"Promoted Headers1" = Table.PromoteHeaders(#"Transposed Table", [PromoteAllScalars=true]),
+				
+				    // Forzamos número con cultura ES por la coma decimal
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers1",{{"", type text}, {"Índice general", type number}}, "es-ES"),
+				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"", "Fecha provisional"}}),
+				
+				    // >>> NUEVO: convertir 2025M07 -> 01/07/2025
+				    #"Added Fecha" = Table.AddColumn(#"Renamed Columns", "Fecha", each
+				        let
+				            partes = Text.Split([Fecha provisional], "M"),
+				            anio   = Number.FromText(partes{0}),
+				            mes    = Number.FromText(partes{1})
+				        in
+				            #date(anio, mes, 1)
+				    , type date),
+				
+				    // Dejar solo Fecha e Índice y ordenar
+				    #"Removed Columns" = Table.RemoveColumns(#"Added Fecha",{"Fecha provisional"}),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Removed Columns",{"Fecha","Índice general"}),
+				    #"Sorted Rows" = Table.Sort(#"Reordered Columns", {{"Fecha", Order.Ascending}})
+				in
+				    #"Sorted Rows"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

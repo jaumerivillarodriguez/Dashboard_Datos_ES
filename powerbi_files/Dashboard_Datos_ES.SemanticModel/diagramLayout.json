@@ -11,7 +11,7 @@
         {
           "location": {
             "x": 0,
-            "y": 341.67136994453375
+            "y": 360.3575260135438
           },
           "nodeIndex": "H_VIVIENDAS",
           "nodeLineageTag": "b412a3d9-5412-473c-a701-d2093a7e2a06",
@@ -24,20 +24,20 @@
         {
           "location": {
             "x": 280.55510982134859,
-            "y": 345.96818882725967
+            "y": 364.65434489626972
           },
           "nodeIndex": "H_MEDIA_SUELDOS_ANUALES",
           "nodeLineageTag": "be815ed7-1f3b-4e48-a289-f1b6a9e8a614",
           "size": {
             "height": 235.44041233107612,
-            "width": 234
+            "width": 243.96594990347205
           },
           "zIndex": 0
         },
         {
           "location": {
             "x": 587.24126589035848,
-            "y": 346.67136994453369
+            "y": 365.35752601354375
           },
           "nodeIndex": "H_SUELDOS_POR_ACTIVIDAD",
           "nodeLineageTag": "ac872c80-ca0d-460b-8459-7f772de93098",
@@ -50,7 +50,7 @@
         {
           "location": {
             "x": 445.43301926883782,
-            "y": 14.948924855208027
+            "y": 33.63508092421808
           },
           "nodeIndex": "M_CALENDARIO",
           "nodeLineageTag": "3048ba3e-06a2-4045-b10c-ec32b927db32",
@@ -63,7 +63,7 @@
         {
           "location": {
             "x": 892.75425626206606,
-            "y": 346.89157611007181
+            "y": 365.57773217908186
           },
           "nodeIndex": "H_MEDIA_SUELDOS_EDAD",
           "nodeLineageTag": "32b88ee7-875d-4ef6-a03b-31677ad04b26",
@@ -76,7 +76,7 @@
         {
           "location": {
             "x": 204.97580731978948,
-            "y": 773.60686125701557
+            "y": 792.29301732602562
           },
           "nodeIndex": "M_CCAA",
           "nodeLineageTag": "bff33f9c-13cd-4ffe-8ddf-f060dcb67fca",
@@ -89,12 +89,38 @@
         {
           "location": {
             "x": 611.53897111512219,
-            "y": 752.86559536665686
+            "y": 771.551751435667
           },
           "nodeIndex": "M_SEXO",
           "nodeLineageTag": "709e5911-0b75-4f61-8ef8-f5edb1af476a",
           "size": {
             "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1360.5232986486083,
+            "y": 0
+          },
+          "nodeIndex": "_Medidas",
+          "nodeLineageTag": "662da2b8-bb3e-41d1-ac0b-e37aa6cf9e49",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1159.9289845922815,
+            "y": 365.00291521466272
+          },
+          "nodeIndex": "H_IPC",
+          "nodeLineageTag": "5408f055-d44e-4262-884d-d4246889550f",
+          "size": {
+            "height": 246.34565510373022,
             "width": 234
           },
           "zIndex": 0

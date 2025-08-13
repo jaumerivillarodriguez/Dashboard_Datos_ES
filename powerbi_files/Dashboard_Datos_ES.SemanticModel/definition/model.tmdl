@@ -12,9 +12,9 @@ queryGroup 'Fecha Max y Fecha Min'
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBIDesktopVersion = 2.145.1602.0 (25.07)+10647c9fa319b5e39936cdb21328038c371d1fe4
+annotation PBIDesktopVersion = 2.146.705.0 (25.08)+b71502aff0a01340c88f384884ef42771068f115
 
-annotation PBI_QueryOrder = ["H_VIVIENDAS","H_MEDIA_SUELDOS_ANUALES","H_MEDIA_SUELDOS_EDAD","H_SUELDOS_POR_ACTIVIDAD","M_CALENDARIO","Fecha_Maxima","Fecha_Minima","M_SEXO","M_CCAA","_Medidas"]
+annotation PBI_QueryOrder = ["H_VIVIENDAS","H_MEDIA_SUELDOS_ANUALES","H_MEDIA_SUELDOS_EDAD","H_SUELDOS_POR_ACTIVIDAD","M_CALENDARIO","Fecha_Maxima","Fecha_Minima","M_SEXO","M_CCAA","H_IPC","_Medidas"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
@@ -26,6 +26,7 @@ ref table H_MEDIA_SUELDOS_EDAD
 ref table M_SEXO
 ref table M_CCAA
 ref table _Medidas
+ref table H_IPC
 
 ref cultureInfo es-ES
 
