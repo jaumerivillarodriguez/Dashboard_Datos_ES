@@ -30,7 +30,7 @@ table _Medidas
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Salario medio (anuales)' =
+	measure 'Salario medio bruto anual' =
 			
 			VAR noSexoSel = NOT ISFILTERED(M_SEXO[Sexo])            -- TRUE si no hay filtro de sexo
 			VAR noCCAA_Sel = NOT ISFILTERED(M_CCAA[CCAA])           -- TRUE si no hay filtro de CCAA
@@ -113,11 +113,9 @@ table _Medidas
 		displayFolder: Salarios / Vivienda / IPC\Salarios
 		lineageTag: 3014414a-8eaa-4047-b209-1be52050a60d
 
-	measure 'Brecha % (anuales)' = ```
+	measure 'Brecha % (anuales)' =
 			
 			DIVIDE([Brecha € (anuales)], [Salario medio H (anuales)])
-			
-			```
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		displayFolder: Salarios / Vivienda / IPC\Salarios
 		lineageTag: 79190d9e-23cf-4cc2-b6e9-11b3b16d91ed
@@ -127,12 +125,12 @@ table _Medidas
 			VAR baseYear = [_Año base indice aux]
 			VAR baseVal =
 			    CALCULATE(
-			        [Salario medio (anuales)],
+			        [Salario medio bruto anual],
 			        ALL(M_CALENDARIO),                     -- ignora tiempo para ir al año base
 			        M_CALENDARIO[Año] = baseYear
 			    )
 			RETURN
-			DIVIDE([Salario medio (anuales)], baseVal) * 100
+			DIVIDE([Salario medio bruto anual], baseVal) * 100
 			
 			```
 		displayFolder: Salarios / Vivienda / IPC\Salarios
@@ -217,7 +215,7 @@ table _Medidas
 			VAR ctxYear  = MAX(M_CALENDARIO[Año])                          -- funciona tanto si el eje es Año como Mes
 			VAR baseVal  =
 			    CALCULATE(
-			        [Salario medio (anuales)],
+			        [Salario medio bruto anual],
 			        ALL(M_CALENDARIO),
 			        M_CALENDARIO[Año] = 2015
 			    )
@@ -225,7 +223,7 @@ table _Medidas
 			IF(
 			    ctxYear > lastYear,
 			    BLANK(),                                                   -- oculta puntos > último año con datos
-			    DIVIDE([Salario medio (anuales)] - baseVal, baseVal)
+			    DIVIDE([Salario medio bruto anual] - baseVal, baseVal)
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		displayFolder: Salarios / Vivienda / IPC\Salarios
@@ -247,26 +245,12 @@ table _Medidas
 		displayFolder: Salarios / Vivienda / IPC\IPC
 		lineageTag: 94c5f2af-42e2-4141-8650-7e63ae4e1da7
 
-	measure '% Salario real variación desde 2015' =
-			
-			VAR lastYear = [_Ultimo año salario]
-			VAR ctxYear  = MAX(M_CALENDARIO[Año])
-			RETURN
-			IF(
-			    ctxYear > lastYear,
-			    BLANK(),
-			    [% Salario variación desde 2015] - [% IPC variación desde 2015]
-			)
-		formatString: 0.00\ %;-0.00\ %;0.00\ %
-		displayFolder: Salarios / Vivienda / IPC\Salarios
-		lineageTag: 1ab71039-4e05-4d43-9ff3-1f6dd7e9759f
-
 	measure '_Ultimo año salario' =
 			
 			MAXX(
 			    FILTER(
 			        ALL(M_CALENDARIO),
-			        NOT ISBLANK( CALCULATE([Salario medio (anuales)]) )   -- sólo años con dato real
+			        NOT ISBLANK( CALCULATE([Salario medio bruto anual]) )   -- sólo años con dato real
 			    ),
 			    M_CALENDARIO[Año]
 			)
@@ -274,6 +258,171 @@ table _Medidas
 		formatString: 0
 		displayFolder: _Auxiliares
 		lineageTag: de7cbaac-1a62-4d68-9e19-ae7fd9e619fb
+
+	measure '% Gap Vivienda – Salario' = [% IPV variación desde 2015] - [% Salario variación desde 2015]
+		displayFolder: Salarios / Vivienda / IPC\Vivienda
+		lineageTag: cfa91b3a-1d2f-456a-b90a-ee2fbfcc6812
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Salario YoY' =
+			
+			VAR prev =
+			    CALCULATE(
+			        [Salario medio bruto anual],
+			        DATEADD(M_CALENDARIO[Fecha], -1, YEAR)
+			    )
+			RETURN
+			IF(
+			    ISBLANK(prev),
+			    BLANK(),
+			    DIVIDE([Salario medio bruto anual] - prev, prev)
+			)
+		displayFolder: Salarios / Vivienda / IPC\_Temporales
+		lineageTag: d5e3e858-18e2-4907-b0de-8a07fdedfe02
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Brecha YoY %' = ```
+			
+			VAR prev =  CALCULATE([Brecha € (anuales)],
+			                DATEADD(M_CALENDARIO[Fecha], -1, YEAR)
+			            )
+			    
+			RETURN
+			
+			    IF(
+			        ISBLANK(prev),
+			        BLANK(),
+			        DIVIDE([Brecha € (anuales)] - prev, prev)
+			    )
+			```
+		displayFolder: Salarios / Vivienda / IPC\_Temporales
+		lineageTag: d271b4b5-153d-4da9-946a-714627d71dc9
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Brecha % YoY (p.p.)' = ```
+			
+			    [Brecha % (anuales)] - CALCULATE([Brecha % (anuales)], DATEADD(M_CALENDARIO[Fecha], -1, YEAR))
+			
+			```
+		displayFolder: Salarios / Vivienda / IPC\_Temporales
+		lineageTag: ad34a49d-a910-4541-9358-65a130697ca0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Brecha € variación desde 2015' = ```
+			
+			VAR base =
+			    CALCULATE([Brecha € (anuales)],
+			        ALL(M_CALENDARIO),
+			        M_CALENDARIO[Año] = 2015
+			    )
+			
+			RETURN
+			
+			    DIVIDE([Brecha € (anuales)] - base, base)
+			
+			```
+		displayFolder: Salarios / Vivienda / IPC\_Temporales
+		lineageTag: c4a15507-2440-4308-861d-3f9acfe6a155
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% IPV YoY (p.p.)' = ```
+			
+			[% IPV variación desde 2015] -
+			CALCULATE([% IPV variación desde 2015], DATEADD(M_CALENDARIO[Fecha], -1, YEAR))
+			
+			```
+		displayFolder: Salarios / Vivienda / IPC\_Temporales
+		lineageTag: 79f6b739-bbfe-402b-b195-b6fade867cca
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Variación anual IPC' = ```
+			
+			VAR prevYear =
+			    CALCULATE(
+			        [% IPC variación desde 2015],
+			        DATEADD(M_CALENDARIO[Fecha], -1, YEAR)
+			    )
+			RETURN
+			[% IPC variación desde 2015] - prevYear
+			
+			```
+		displayFolder: Salarios / Vivienda / IPC\_Temporales
+		lineageTag: 507ad8c0-c8f2-4567-b852-ade6a3825e9d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Salario real YoY (p.p.)' = ```
+			
+			[% Salario real variación desde 2015] -
+			CALCULATE([% Salario real variación desde 2015], DATEADD(M_CALENDARIO[Fecha], -1, YEAR))
+			
+			```
+		displayFolder: Salarios / Vivienda / IPC\_Temporales
+		lineageTag: e5443fcb-e2a3-43e5-9b45-900019282c89
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Salario real variación desde 2015' =
+			
+			VAR lastYear = [_Ultimo año salario]
+			VAR ctxYear  = MAX(M_CALENDARIO[Año])
+			
+			RETURN
+				IF(
+				    ctxYear > lastYear,
+				    BLANK(),
+				    [% Salario variación desde 2015] - [% IPC variación desde 2015]
+				)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Salarios / Vivienda / IPC\Salarios
+		lineageTag: b1e0e075-d870-48d9-8ffc-442e9709d8c4
+
+	measure '% Salario YoY (fmt)' =
+			
+			VAR yoy = [% Salario YoY]                       -- reutiliza la medida numérica
+			RETURN
+			IF(
+			    ISBLANK(yoy),
+			    BLANK(),
+			    SWITCH(                                      -- símbolo antes del número
+			        TRUE(),
+			        yoy > 0, "▲ ",
+			        yoy < 0, "▼ ",
+			        "= "
+			    ) &
+			    FORMAT(yoy, "0.00%")
+			)
+		displayFolder: Salarios / Vivienda / IPC\_Temporales
+		lineageTag: 160b8be1-7a3d-4006-8952-016ca3bf85ef
+
+	measure 'YoY txt' =
+			
+			VAR selYear = MAX(M_CALENDARIO[Año])
+			RETURN
+			"YoY | " & selYear & " vs " & selYear - 1
+		displayFolder: Salarios / Vivienda / IPC\_Temporales
+		lineageTag: 714da24d-d46e-4d85-88cd-51b8fa0463a9
+
+	measure 'Año min eje x' = 2015
+		formatString: 0
+		displayFolder: Salarios / Vivienda / IPC\_Temporales
+		lineageTag: e07ddc6f-ee86-46f8-a497-59e6093fcc05
+
+	measure 'Año max eje x Salarios' = ```
+			
+			    CALCULATE(
+			        YEAR(MAX(H_MEDIA_SUELDOS_ANUALES[Fecha]))
+			    )
+			```
+		formatString: 0
+		displayFolder: Salarios / Vivienda / IPC\_Temporales
+		lineageTag: 1c23f859-c22d-4294-b18b-ce79be297840
 
 	partition _Medidas = m
 		mode: import

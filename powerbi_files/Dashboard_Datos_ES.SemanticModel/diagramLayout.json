@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 0,
+        "x": 131.21247835411509,
         "y": 0
       },
       "nodes": [
@@ -19,7 +19,7 @@
             "height": 235,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 1
         },
         {
           "location": {
@@ -32,7 +32,7 @@
             "height": 235.44041233107612,
             "width": 243.96594990347205
           },
-          "zIndex": 0
+          "zIndex": 2
         },
         {
           "location": {
@@ -45,7 +45,7 @@
             "height": 238.70318111727397,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 3
         },
         {
           "location": {
@@ -58,7 +58,7 @@
             "height": 248,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 4
         },
         {
           "location": {
@@ -71,7 +71,7 @@
             "height": 246.72020616553812,
             "width": 233.39896917231
           },
-          "zIndex": 0
+          "zIndex": 5
         },
         {
           "location": {
@@ -84,7 +84,7 @@
             "height": 104,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 6
         },
         {
           "location": {
@@ -97,12 +97,12 @@
             "height": 152,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 7
         },
         {
           "location": {
-            "x": 1360.5232986486083,
-            "y": 0
+            "x": 1676.9422080838449,
+            "y": 118.34565510373024
           },
           "nodeIndex": "_Medidas",
           "nodeLineageTag": "662da2b8-bb3e-41d1-ac0b-e37aa6cf9e49",
@@ -110,7 +110,7 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 9
         },
         {
           "location": {
@@ -123,11 +123,11 @@
             "height": 246.34565510373022,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 8
         }
       ],
       "name": "Todas las tablas",
-      "zoomValue": 80.273331468512538,
+      "zoomValue": 74,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,

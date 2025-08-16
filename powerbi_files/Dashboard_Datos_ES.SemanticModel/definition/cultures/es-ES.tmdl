@@ -2,8 +2,4642 @@ cultureInfo es-ES
 
 	linguisticMetadata =
 			{
-			  "Version": "1.0.0",
-			  "Language": "en-US"
+			  "Version": "4.1.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "h_vivienda": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "H_VIVIENDAS"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "h vivienda": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "H_VIVIENDAS": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "h_vivienda.ccaa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "H_VIVIENDAS",
+			          "ConceptualProperty": "CCAA"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "ccaa": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "h_vivienda.tipo_vivienda": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "H_VIVIENDAS",
+			          "ConceptualProperty": "Tipo Vivienda"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tipo vivienda": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "h_vivienda.indicador": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "H_VIVIENDAS",
+			          "ConceptualProperty": "Indicador"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "indicador": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "h_vivienda.valor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "H_VIVIENDAS",
+			          "ConceptualProperty": "Valor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "courage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "bravery": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "heroism": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "fearlessness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "boldness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "gallantry": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "lionheartedness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "pluck": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "spirit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "nerve": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "h_vivienda.fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "H_VIVIENDAS",
+			          "ConceptualProperty": "Fecha"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "h_media_sueldos_anuale": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "H_MEDIA_SUELDOS_ANUALES"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "h media sueldos anuale": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "h media sueldo anuale": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "H_MEDIA_SUELDOS_ANUALES": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "h_media_sueldos_anuale.salario_medio_anual": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "H_MEDIA_SUELDOS_ANUALES",
+			          "ConceptualProperty": "Salario Medio Anual"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "salario medio anual": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "h_media_sueldos_anuale.ccaa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "H_MEDIA_SUELDOS_ANUALES",
+			          "ConceptualProperty": "CCAA"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "ccaa": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "h_media_sueldos_anuale.sexo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "H_MEDIA_SUELDOS_ANUALES",
+			          "ConceptualProperty": "Sexo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "sexo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "h_media_sueldos_anuale.fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "H_MEDIA_SUELDOS_ANUALES",
+			          "ConceptualProperty": "Fecha"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "h_sueldos_por_actividad": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "H_SUELDOS_POR_ACTIVIDAD"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "h sueldos por actividad": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "h sueldo por actividad": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "H_SUELDOS_POR_ACTIVIDAD": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "h_sueldos_por_actividad.actividad": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "H_SUELDOS_POR_ACTIVIDAD",
+			          "ConceptualProperty": "Actividad"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "actividad": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "h_sueldos_por_actividad.fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "H_SUELDOS_POR_ACTIVIDAD",
+			          "ConceptualProperty": "Fecha"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "h_sueldos_por_actividad.sexo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "H_SUELDOS_POR_ACTIVIDAD",
+			          "ConceptualProperty": "Sexo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "sexo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "h_sueldos_por_actividad.salario": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "H_SUELDOS_POR_ACTIVIDAD",
+			          "ConceptualProperty": "Salario"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "salario": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "m_calendario": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_CALENDARIO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "m calendario": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "M_CALENDARIO": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "m_calendario.fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_CALENDARIO",
+			          "ConceptualProperty": "Fecha"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "m_calendario.año": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_CALENDARIO",
+			          "ConceptualProperty": "Año"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "año": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "m_calendario.mes_num": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_CALENDARIO",
+			          "ConceptualProperty": "Mes num"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mes num": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me num": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "me number": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "m_calendario.mes_texto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_CALENDARIO",
+			          "ConceptualProperty": "Mes Texto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mes texto": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me texto": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "m_calendario.mes_abre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_CALENDARIO",
+			          "ConceptualProperty": "Mes Abre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mes abre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me abre": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "m_calendario.q": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_CALENDARIO",
+			          "ConceptualProperty": "Q"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "q": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "m_calendario.trim": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_CALENDARIO",
+			          "ConceptualProperty": "Trim"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trim": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "lean": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "neat": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "tidy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "orderly": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "smart": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "spruce": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "h_media_sueldos_edad": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "H_MEDIA_SUELDOS_EDAD"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "h media sueldos edad": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "h media sueldo edad": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "H_MEDIA_SUELDOS_EDAD": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "h_media_sueldos_edad.rango_edad": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "H_MEDIA_SUELDOS_EDAD",
+			          "ConceptualProperty": "Rango edad"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "rango edad": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "h_media_sueldos_edad.sexo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "H_MEDIA_SUELDOS_EDAD",
+			          "ConceptualProperty": "Sexo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "sexo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "h_media_sueldos_edad.salario_medio_anual": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "H_MEDIA_SUELDOS_EDAD",
+			          "ConceptualProperty": "Salario medio anual"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "salario medio anual": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "h_media_sueldos_edad.fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "H_MEDIA_SUELDOS_EDAD",
+			          "ConceptualProperty": "Fecha"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "m_sexo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_SEXO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "m sexo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "M_SEXO": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "m_sexo.sexo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_SEXO",
+			          "ConceptualProperty": "Sexo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sexo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "m_sexo.orden": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_SEXO",
+			          "ConceptualProperty": "Orden"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "orden": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "m_sexo.es_total": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_SEXO",
+			          "ConceptualProperty": "EsTotal"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "es total": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "EsTotal": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "es aggregate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "es overall": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "m_ccaa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_CCAA"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "m ccaa": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "M_CCAA": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "m_ccaa.ccaa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_CCAA",
+			          "ConceptualProperty": "CCAA"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ccaa": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "_medida": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.entity__ambos_sexos_aux": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "_Ambos sexos aux"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "_ambos sexos aux": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.entity__año_base_indice_aux": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "_Año base indice aux"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "_año base indice aux": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.salario_medio_anuales": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Salario medio bruto anual"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "salario medio (anuales)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "salario medio": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.salario_medio_h_anuales": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Salario medio H (anuales)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "salario medio h (anuales)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "salario medio h": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.salario_medio_m_anuales": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Salario medio M (anuales)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "salario medio m (anuales)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "salario medio m": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.brecha__anuales": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Brecha € (anuales)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "brecha € (anuales)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "brecha €": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.brecha__anuales1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Brecha % (anuales)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "brecha % (anuales)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "brecha %": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "brecha percentage (anuale)": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "brecha pct (anuale)": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.índice_salario_2015100": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Índice salario (2015->100)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "índice salario (2015->100)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "índice salario": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "índice salario (2015 >100)": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.salario_medio_edad": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Salario medio (edad)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "salario medio (edad)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "salario medio": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.salario_medio_actividad": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Salario medio (actividad)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "salario medio (actividad)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "salario medio": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.IPV_variación_desde_2015": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "% IPV variación desde 2015"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% IPV variación desde 2015": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage ipv variación desde 2015": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "pct ipv variación desde 2015": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "Precio de la vivienda - IPV": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.salario_variación_desde_2015": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "% Salario variación desde 2015"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% salario variación desde 2015": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage salario variación desde 2015": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "pct salario variación desde 2015": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "% Salario medio": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.IPC_variación_desde_2015": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "% IPC variación desde 2015"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% IPC variación desde 2015": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage ipc variación desde 2015": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "pct ipc variación desde 2015": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "Inflación - IPC": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.entity__ultimo_año_salario": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "_Ultimo año salario"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "_ultimo año salario": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.gap_vivienda__salario": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "% Gap Vivienda – Salario"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% gap vivienda – salario": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage gap vivienda – salario": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "pct gap vivienda – salario": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.variación_anual_salario": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "% Salario YoY"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% variación anual salario": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage variación anual salario": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "pct variación anual salario": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.brecha_YoY_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Brecha YoY %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "brecha YoY %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "brecha yoy percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "brecha yoy pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.brecha__YoY_p_p_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Brecha % YoY (p.p.)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "brecha % YoY (p.p.)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "brecha % YoY": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.brecha__variación_desde_2015": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "% Brecha € variación desde 2015"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% brecha € variación desde 2015": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.IPV_YoY_p_p_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "% IPV YoY (p.p.)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% IPV YoY (p.p.)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "% IPV YoY": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.variación_anual_IPC": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "% Variación anual IPC"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% variación anual IPC": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage variación anual ipc": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "pct variación anual ipc": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.salario_real_YoY_p_p_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "% Salario real YoY (p.p.)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% salario real YoY (p.p.)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "% salario real YoY": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "h_ipc": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "H_IPC"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "h ipc": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "H_IPC": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "h_ipc.fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "H_IPC",
+			          "ConceptualProperty": "Fecha"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "h_ipc.índice_general": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "H_IPC",
+			          "ConceptualProperty": "Índice general"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "índice general": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "h_ipc_has_m_calendario": {
+			      "Binding": {
+			        "ConceptualEntity": "H_IPC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_ipc": {
+			          "Target": {
+			            "Entity": "h_ipc"
+			          }
+			        },
+			        "m_calendario": {
+			          "Target": {
+			            "Entity": "m_calendario"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_ipc"
+			            },
+			            "Object": {
+			              "Role": "m_calendario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_ipcs_have_m_calendarios"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_calendario"
+			            },
+			            "Object": {
+			              "Role": "h_ipc"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_calendarios_have_h_ipcs"
+			        }
+			      ]
+			    },
+			    "h_media_sueldos_edad_has_m_sexo": {
+			      "Binding": {
+			        "ConceptualEntity": "H_MEDIA_SUELDOS_EDAD"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_media_sueldos_edad": {
+			          "Target": {
+			            "Entity": "h_media_sueldos_edad"
+			          }
+			        },
+			        "m_sexo": {
+			          "Target": {
+			            "Entity": "m_sexo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_media_sueldos_edad"
+			            },
+			            "Object": {
+			              "Role": "m_sexo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_media_sueldos_edads_have_m_sexos"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_sexo"
+			            },
+			            "Object": {
+			              "Role": "h_media_sueldos_edad"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_sexos_have_h_media_sueldos_edads"
+			        }
+			      ]
+			    },
+			    "h_media_sueldos_edad_has_m_calendario": {
+			      "Binding": {
+			        "ConceptualEntity": "H_MEDIA_SUELDOS_EDAD"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_media_sueldos_edad": {
+			          "Target": {
+			            "Entity": "h_media_sueldos_edad"
+			          }
+			        },
+			        "m_calendario": {
+			          "Target": {
+			            "Entity": "m_calendario"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_media_sueldos_edad"
+			            },
+			            "Object": {
+			              "Role": "m_calendario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_media_sueldos_edads_have_m_calendarios"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_calendario"
+			            },
+			            "Object": {
+			              "Role": "h_media_sueldos_edad"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_calendarios_have_h_media_sueldos_edads"
+			        }
+			      ]
+			    },
+			    "h_sueldos_por_actividad_has_m_sexo": {
+			      "Binding": {
+			        "ConceptualEntity": "H_SUELDOS_POR_ACTIVIDAD"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_sueldos_por_actividad": {
+			          "Target": {
+			            "Entity": "h_sueldos_por_actividad"
+			          }
+			        },
+			        "m_sexo": {
+			          "Target": {
+			            "Entity": "m_sexo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_sueldos_por_actividad"
+			            },
+			            "Object": {
+			              "Role": "m_sexo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_sueldos_por_actividads_have_m_sexos"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_sexo"
+			            },
+			            "Object": {
+			              "Role": "h_sueldos_por_actividad"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_sexos_have_h_sueldos_por_actividads"
+			        }
+			      ]
+			    },
+			    "h_sueldos_por_actividad_has_m_calendario": {
+			      "Binding": {
+			        "ConceptualEntity": "H_SUELDOS_POR_ACTIVIDAD"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_sueldos_por_actividad": {
+			          "Target": {
+			            "Entity": "h_sueldos_por_actividad"
+			          }
+			        },
+			        "m_calendario": {
+			          "Target": {
+			            "Entity": "m_calendario"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_sueldos_por_actividad"
+			            },
+			            "Object": {
+			              "Role": "m_calendario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_sueldos_por_actividads_have_m_calendarios"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_calendario"
+			            },
+			            "Object": {
+			              "Role": "h_sueldos_por_actividad"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_calendarios_have_h_sueldos_por_actividads"
+			        }
+			      ]
+			    },
+			    "h_media_sueldos_anuale_has_m_sexo": {
+			      "Binding": {
+			        "ConceptualEntity": "H_MEDIA_SUELDOS_ANUALES"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_media_sueldos_anuale": {
+			          "Target": {
+			            "Entity": "h_media_sueldos_anuale"
+			          }
+			        },
+			        "m_sexo": {
+			          "Target": {
+			            "Entity": "m_sexo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_media_sueldos_anuale"
+			            },
+			            "Object": {
+			              "Role": "m_sexo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_media_sueldos_anuales_have_m_sexos"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_sexo"
+			            },
+			            "Object": {
+			              "Role": "h_media_sueldos_anuale"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_sexos_have_h_media_sueldos_anuales"
+			        }
+			      ]
+			    },
+			    "h_media_sueldos_anuale_has_m_ccaa": {
+			      "Binding": {
+			        "ConceptualEntity": "H_MEDIA_SUELDOS_ANUALES"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_media_sueldos_anuale": {
+			          "Target": {
+			            "Entity": "h_media_sueldos_anuale"
+			          }
+			        },
+			        "m_ccaa": {
+			          "Target": {
+			            "Entity": "m_ccaa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_media_sueldos_anuale"
+			            },
+			            "Object": {
+			              "Role": "m_ccaa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_media_sueldos_anuales_have_m_ccaas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_ccaa"
+			            },
+			            "Object": {
+			              "Role": "h_media_sueldos_anuale"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_ccaas_have_h_media_sueldos_anuales"
+			        }
+			      ]
+			    },
+			    "h_media_sueldos_anuale_has_m_calendario": {
+			      "Binding": {
+			        "ConceptualEntity": "H_MEDIA_SUELDOS_ANUALES"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_media_sueldos_anuale": {
+			          "Target": {
+			            "Entity": "h_media_sueldos_anuale"
+			          }
+			        },
+			        "m_calendario": {
+			          "Target": {
+			            "Entity": "m_calendario"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_media_sueldos_anuale"
+			            },
+			            "Object": {
+			              "Role": "m_calendario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_media_sueldos_anuales_have_m_calendarios"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_calendario"
+			            },
+			            "Object": {
+			              "Role": "h_media_sueldos_anuale"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_calendarios_have_h_media_sueldos_anuales"
+			        }
+			      ]
+			    },
+			    "h_vivienda_has_m_ccaa": {
+			      "Binding": {
+			        "ConceptualEntity": "H_VIVIENDAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_vivienda": {
+			          "Target": {
+			            "Entity": "h_vivienda"
+			          }
+			        },
+			        "m_ccaa": {
+			          "Target": {
+			            "Entity": "m_ccaa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_vivienda"
+			            },
+			            "Object": {
+			              "Role": "m_ccaa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_viviendas_have_m_ccaas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_ccaa"
+			            },
+			            "Object": {
+			              "Role": "h_vivienda"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_ccaas_have_h_viviendas"
+			        }
+			      ]
+			    },
+			    "h_vivienda_has_m_calendario": {
+			      "Binding": {
+			        "ConceptualEntity": "H_VIVIENDAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_vivienda": {
+			          "Target": {
+			            "Entity": "h_vivienda"
+			          }
+			        },
+			        "m_calendario": {
+			          "Target": {
+			            "Entity": "m_calendario"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_vivienda"
+			            },
+			            "Object": {
+			              "Role": "m_calendario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_viviendas_have_m_calendarios"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_calendario"
+			            },
+			            "Object": {
+			              "Role": "h_vivienda"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_calendarios_have_h_viviendas"
+			        }
+			      ]
+			    },
+			    "h_ipc_has_índice_general": {
+			      "Binding": {
+			        "ConceptualEntity": "H_IPC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_ipc": {
+			          "Target": {
+			            "Entity": "h_ipc"
+			          }
+			        },
+			        "h_ipc.índice_general": {
+			          "Target": {
+			            "Entity": "h_ipc.índice_general"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_ipc"
+			            },
+			            "Object": {
+			              "Role": "h_ipc.índice_general"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_ipcs_have_índice_generals"
+			        }
+			      ]
+			    },
+			    "h_ipc_has_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "H_IPC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_ipc": {
+			          "Target": {
+			            "Entity": "h_ipc"
+			          }
+			        },
+			        "h_ipc.fecha": {
+			          "Target": {
+			            "Entity": "h_ipc.fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_ipc"
+			            },
+			            "Object": {
+			              "Role": "h_ipc.fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_ipcs_have_fechas"
+			        }
+			      ]
+			    },
+			    "m_sexo_has_entity__medida_salario_real_YoY_p_p_": {
+			      "Binding": {
+			        "ConceptualEntity": "M_SEXO"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "m_sexo": {
+			          "Target": {
+			            "Entity": "m_sexo"
+			          }
+			        },
+			        "entity__medida.salario_real_YoY_p_p_": {
+			          "Target": {
+			            "Entity": "entity__medida.salario_real_YoY_p_p_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_sexo"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.salario_real_YoY_p_p_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_sexos_have__salario_real_YoY_p_p_"
+			        }
+			      ]
+			    },
+			    "m_ccaa_has_entity__medida_salario_real_YoY_p_p_": {
+			      "Binding": {
+			        "ConceptualEntity": "M_CCAA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "m_ccaa": {
+			          "Target": {
+			            "Entity": "m_ccaa"
+			          }
+			        },
+			        "entity__medida.salario_real_YoY_p_p_": {
+			          "Target": {
+			            "Entity": "entity__medida.salario_real_YoY_p_p_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_ccaa"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.salario_real_YoY_p_p_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_ccaas_have__salario_real_YoY_p_p_"
+			        }
+			      ]
+			    },
+			    "m_calendario_has_entity__medida_salario_real_YoY_p_p_": {
+			      "Binding": {
+			        "ConceptualEntity": "M_CALENDARIO"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "m_calendario": {
+			          "Target": {
+			            "Entity": "m_calendario"
+			          }
+			        },
+			        "entity__medida.salario_real_YoY_p_p_": {
+			          "Target": {
+			            "Entity": "entity__medida.salario_real_YoY_p_p_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_calendario"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.salario_real_YoY_p_p_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_calendarios_have__salario_real_YoY_p_p_"
+			        }
+			      ]
+			    },
+			    "h_media_sueldos_anuale_has_entity__medida_salario_real_YoY_p_p_": {
+			      "Binding": {
+			        "ConceptualEntity": "H_MEDIA_SUELDOS_ANUALES"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_media_sueldos_anuale": {
+			          "Target": {
+			            "Entity": "h_media_sueldos_anuale"
+			          }
+			        },
+			        "entity__medida.salario_real_YoY_p_p_": {
+			          "Target": {
+			            "Entity": "entity__medida.salario_real_YoY_p_p_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_media_sueldos_anuale"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.salario_real_YoY_p_p_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_media_sueldos_anuales_have__salario_real_YoY_p_p_"
+			        }
+			      ]
+			    },
+			    "h_ipc_has_entity__medida_salario_real_YoY_p_p_": {
+			      "Binding": {
+			        "ConceptualEntity": "H_IPC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_ipc": {
+			          "Target": {
+			            "Entity": "h_ipc"
+			          }
+			        },
+			        "entity__medida.salario_real_YoY_p_p_": {
+			          "Target": {
+			            "Entity": "entity__medida.salario_real_YoY_p_p_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_ipc"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.salario_real_YoY_p_p_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_ipcs_have__salario_real_YoY_p_p_"
+			        }
+			      ]
+			    },
+			    "h_ipc_has_entity__medida_variación_anual_IPC": {
+			      "Binding": {
+			        "ConceptualEntity": "H_IPC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_ipc": {
+			          "Target": {
+			            "Entity": "h_ipc"
+			          }
+			        },
+			        "entity__medida.variación_anual_IPC": {
+			          "Target": {
+			            "Entity": "entity__medida.variación_anual_IPC"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_ipc"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.variación_anual_IPC"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_ipcs_have__variación_anual_IPC"
+			        }
+			      ]
+			    },
+			    "h_vivienda_has_entity__medida_IPV_YoY_p_p_": {
+			      "Binding": {
+			        "ConceptualEntity": "H_VIVIENDAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_vivienda": {
+			          "Target": {
+			            "Entity": "h_vivienda"
+			          }
+			        },
+			        "entity__medida.IPV_YoY_p_p_": {
+			          "Target": {
+			            "Entity": "entity__medida.IPV_YoY_p_p_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_vivienda"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.IPV_YoY_p_p_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_viviendas_have__IPV_YoY_p_p_"
+			        }
+			      ]
+			    },
+			    "m_ccaa_has_entity__medida_brecha__variación_desde_2015": {
+			      "Binding": {
+			        "ConceptualEntity": "M_CCAA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "m_ccaa": {
+			          "Target": {
+			            "Entity": "m_ccaa"
+			          }
+			        },
+			        "entity__medida.brecha__variación_desde_2015": {
+			          "Target": {
+			            "Entity": "entity__medida.brecha__variación_desde_2015"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_ccaa"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.brecha__variación_desde_2015"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_ccaas_have__brecha__variación_desde_2015"
+			        }
+			      ]
+			    },
+			    "h_media_sueldos_anuale_has_entity__medida_brecha__variación_desde_2015": {
+			      "Binding": {
+			        "ConceptualEntity": "H_MEDIA_SUELDOS_ANUALES"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_media_sueldos_anuale": {
+			          "Target": {
+			            "Entity": "h_media_sueldos_anuale"
+			          }
+			        },
+			        "entity__medida.brecha__variación_desde_2015": {
+			          "Target": {
+			            "Entity": "entity__medida.brecha__variación_desde_2015"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_media_sueldos_anuale"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.brecha__variación_desde_2015"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_media_sueldos_anuales_have__brecha__variación_desde_2015"
+			        }
+			      ]
+			    },
+			    "m_ccaa_has_entity__medida_brecha__YoY_p_p_": {
+			      "Binding": {
+			        "ConceptualEntity": "M_CCAA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "m_ccaa": {
+			          "Target": {
+			            "Entity": "m_ccaa"
+			          }
+			        },
+			        "entity__medida.brecha__YoY_p_p_": {
+			          "Target": {
+			            "Entity": "entity__medida.brecha__YoY_p_p_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_ccaa"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.brecha__YoY_p_p_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_ccaas_have_brecha__YoY_p_p_"
+			        }
+			      ]
+			    },
+			    "h_media_sueldos_anuale_has_entity__medida_brecha__YoY_p_p_": {
+			      "Binding": {
+			        "ConceptualEntity": "H_MEDIA_SUELDOS_ANUALES"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_media_sueldos_anuale": {
+			          "Target": {
+			            "Entity": "h_media_sueldos_anuale"
+			          }
+			        },
+			        "entity__medida.brecha__YoY_p_p_": {
+			          "Target": {
+			            "Entity": "entity__medida.brecha__YoY_p_p_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_media_sueldos_anuale"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.brecha__YoY_p_p_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_media_sueldos_anuales_have_brecha__YoY_p_p_"
+			        }
+			      ]
+			    },
+			    "m_ccaa_has_entity__medida_brecha_YoY_": {
+			      "Binding": {
+			        "ConceptualEntity": "M_CCAA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "m_ccaa": {
+			          "Target": {
+			            "Entity": "m_ccaa"
+			          }
+			        },
+			        "entity__medida.brecha_YoY_": {
+			          "Target": {
+			            "Entity": "entity__medida.brecha_YoY_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_ccaa"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.brecha_YoY_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_ccaas_have_brecha_YoY_"
+			        }
+			      ]
+			    },
+			    "h_media_sueldos_anuale_has_entity__medida_brecha_YoY_": {
+			      "Binding": {
+			        "ConceptualEntity": "H_MEDIA_SUELDOS_ANUALES"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_media_sueldos_anuale": {
+			          "Target": {
+			            "Entity": "h_media_sueldos_anuale"
+			          }
+			        },
+			        "entity__medida.brecha_YoY_": {
+			          "Target": {
+			            "Entity": "entity__medida.brecha_YoY_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_media_sueldos_anuale"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.brecha_YoY_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_media_sueldos_anuales_have_brecha_YoY_"
+			        }
+			      ]
+			    },
+			    "m_sexo_has_entity__medida_variación_anual_salario": {
+			      "Binding": {
+			        "ConceptualEntity": "M_SEXO"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "m_sexo": {
+			          "Target": {
+			            "Entity": "m_sexo"
+			          }
+			        },
+			        "entity__medida.variación_anual_salario": {
+			          "Target": {
+			            "Entity": "entity__medida.variación_anual_salario"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_sexo"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.variación_anual_salario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_sexos_have__variación_anual_salario"
+			        }
+			      ]
+			    },
+			    "m_ccaa_has_entity__medida_variación_anual_salario": {
+			      "Binding": {
+			        "ConceptualEntity": "M_CCAA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "m_ccaa": {
+			          "Target": {
+			            "Entity": "m_ccaa"
+			          }
+			        },
+			        "entity__medida.variación_anual_salario": {
+			          "Target": {
+			            "Entity": "entity__medida.variación_anual_salario"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_ccaa"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.variación_anual_salario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_ccaas_have__variación_anual_salario"
+			        }
+			      ]
+			    },
+			    "h_media_sueldos_anuale_has_entity__medida_variación_anual_salario": {
+			      "Binding": {
+			        "ConceptualEntity": "H_MEDIA_SUELDOS_ANUALES"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_media_sueldos_anuale": {
+			          "Target": {
+			            "Entity": "h_media_sueldos_anuale"
+			          }
+			        },
+			        "entity__medida.variación_anual_salario": {
+			          "Target": {
+			            "Entity": "entity__medida.variación_anual_salario"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_media_sueldos_anuale"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.variación_anual_salario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_media_sueldos_anuales_have__variación_anual_salario"
+			        }
+			      ]
+			    },
+			    "m_sexo_has_entity__medida_gap_vivienda__salario": {
+			      "Binding": {
+			        "ConceptualEntity": "M_SEXO"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "m_sexo": {
+			          "Target": {
+			            "Entity": "m_sexo"
+			          }
+			        },
+			        "entity__medida.gap_vivienda__salario": {
+			          "Target": {
+			            "Entity": "entity__medida.gap_vivienda__salario"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_sexo"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.gap_vivienda__salario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_sexos_have__gap_vivienda__salario"
+			        }
+			      ]
+			    },
+			    "m_ccaa_has_entity__medida_gap_vivienda__salario": {
+			      "Binding": {
+			        "ConceptualEntity": "M_CCAA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "m_ccaa": {
+			          "Target": {
+			            "Entity": "m_ccaa"
+			          }
+			        },
+			        "entity__medida.gap_vivienda__salario": {
+			          "Target": {
+			            "Entity": "entity__medida.gap_vivienda__salario"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_ccaa"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.gap_vivienda__salario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_ccaas_have__gap_vivienda__salario"
+			        }
+			      ]
+			    },
+			    "m_calendario_has_entity__medida_gap_vivienda__salario": {
+			      "Binding": {
+			        "ConceptualEntity": "M_CALENDARIO"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "m_calendario": {
+			          "Target": {
+			            "Entity": "m_calendario"
+			          }
+			        },
+			        "entity__medida.gap_vivienda__salario": {
+			          "Target": {
+			            "Entity": "entity__medida.gap_vivienda__salario"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_calendario"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.gap_vivienda__salario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_calendarios_have__gap_vivienda__salario"
+			        }
+			      ]
+			    },
+			    "h_vivienda_has_entity__medida_gap_vivienda__salario": {
+			      "Binding": {
+			        "ConceptualEntity": "H_VIVIENDAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_vivienda": {
+			          "Target": {
+			            "Entity": "h_vivienda"
+			          }
+			        },
+			        "entity__medida.gap_vivienda__salario": {
+			          "Target": {
+			            "Entity": "entity__medida.gap_vivienda__salario"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_vivienda"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.gap_vivienda__salario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_viviendas_have__gap_vivienda__salario"
+			        }
+			      ]
+			    },
+			    "h_media_sueldos_anuale_has_entity__medida_gap_vivienda__salario": {
+			      "Binding": {
+			        "ConceptualEntity": "H_MEDIA_SUELDOS_ANUALES"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_media_sueldos_anuale": {
+			          "Target": {
+			            "Entity": "h_media_sueldos_anuale"
+			          }
+			        },
+			        "entity__medida.gap_vivienda__salario": {
+			          "Target": {
+			            "Entity": "entity__medida.gap_vivienda__salario"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_media_sueldos_anuale"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.gap_vivienda__salario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_media_sueldos_anuales_have__gap_vivienda__salario"
+			        }
+			      ]
+			    },
+			    "m_calendario_has_entity__medida_entity__ultimo_año_salario": {
+			      "Binding": {
+			        "ConceptualEntity": "M_CALENDARIO"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "m_calendario": {
+			          "Target": {
+			            "Entity": "m_calendario"
+			          }
+			        },
+			        "entity__medida.entity__ultimo_año_salario": {
+			          "Target": {
+			            "Entity": "entity__medida.entity__ultimo_año_salario"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_calendario"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.entity__ultimo_año_salario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_calendarios_have__ultimo_año_salario"
+			        }
+			      ]
+			    },
+			    "m_sexo_has_entity__medida_salario_real_variación_desde_2015": {
+			      "Binding": {
+			        "ConceptualEntity": "M_SEXO"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "m_sexo": {
+			          "Target": {
+			            "Entity": "m_sexo"
+			          }
+			        },
+			        "entity__medida.salario_real_variación_desde_2015": {
+			          "Target": {
+			            "Entity": "entity__medida.salario_real_variación_desde_2015"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_sexo"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.salario_real_variación_desde_2015"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_sexos_have__salario_real_variación_desde_2015"
+			        }
+			      ]
+			    },
+			    "m_ccaa_has_entity__medida_salario_real_variación_desde_2015": {
+			      "Binding": {
+			        "ConceptualEntity": "M_CCAA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "m_ccaa": {
+			          "Target": {
+			            "Entity": "m_ccaa"
+			          }
+			        },
+			        "entity__medida.salario_real_variación_desde_2015": {
+			          "Target": {
+			            "Entity": "entity__medida.salario_real_variación_desde_2015"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_ccaa"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.salario_real_variación_desde_2015"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_ccaas_have__salario_real_variación_desde_2015"
+			        }
+			      ]
+			    },
+			    "m_calendario_has_entity__medida_salario_real_variación_desde_2015": {
+			      "Binding": {
+			        "ConceptualEntity": "M_CALENDARIO"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "m_calendario": {
+			          "Target": {
+			            "Entity": "m_calendario"
+			          }
+			        },
+			        "entity__medida.salario_real_variación_desde_2015": {
+			          "Target": {
+			            "Entity": "entity__medida.salario_real_variación_desde_2015"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_calendario"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.salario_real_variación_desde_2015"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_calendarios_have__salario_real_variación_desde_2015"
+			        }
+			      ]
+			    },
+			    "h_media_sueldos_anuale_has_entity__medida_salario_real_variación_desde_2015": {
+			      "Binding": {
+			        "ConceptualEntity": "H_MEDIA_SUELDOS_ANUALES"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_media_sueldos_anuale": {
+			          "Target": {
+			            "Entity": "h_media_sueldos_anuale"
+			          }
+			        },
+			        "entity__medida.salario_real_variación_desde_2015": {
+			          "Target": {
+			            "Entity": "entity__medida.salario_real_variación_desde_2015"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_media_sueldos_anuale"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.salario_real_variación_desde_2015"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_media_sueldos_anuales_have__salario_real_variación_desde_2015"
+			        }
+			      ]
+			    },
+			    "h_ipc_has_entity__medida_salario_real_variación_desde_2015": {
+			      "Binding": {
+			        "ConceptualEntity": "H_IPC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_ipc": {
+			          "Target": {
+			            "Entity": "h_ipc"
+			          }
+			        },
+			        "entity__medida.salario_real_variación_desde_2015": {
+			          "Target": {
+			            "Entity": "entity__medida.salario_real_variación_desde_2015"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_ipc"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.salario_real_variación_desde_2015"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_ipcs_have__salario_real_variación_desde_2015"
+			        }
+			      ]
+			    },
+			    "h_ipc_has_entity__medida_IPC_variación_desde_2015": {
+			      "Binding": {
+			        "ConceptualEntity": "H_IPC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_ipc": {
+			          "Target": {
+			            "Entity": "h_ipc"
+			          }
+			        },
+			        "entity__medida.IPC_variación_desde_2015": {
+			          "Target": {
+			            "Entity": "entity__medida.IPC_variación_desde_2015"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_ipc"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.IPC_variación_desde_2015"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_ipcs_have__IPC_variación_desde_2015"
+			        }
+			      ]
+			    },
+			    "m_sexo_has_entity__medida_salario_variación_desde_2015": {
+			      "Binding": {
+			        "ConceptualEntity": "M_SEXO"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "m_sexo": {
+			          "Target": {
+			            "Entity": "m_sexo"
+			          }
+			        },
+			        "entity__medida.salario_variación_desde_2015": {
+			          "Target": {
+			            "Entity": "entity__medida.salario_variación_desde_2015"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_sexo"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.salario_variación_desde_2015"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_sexos_have__salario_variación_desde_2015"
+			        }
+			      ]
+			    },
+			    "m_ccaa_has_entity__medida_salario_variación_desde_2015": {
+			      "Binding": {
+			        "ConceptualEntity": "M_CCAA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "m_ccaa": {
+			          "Target": {
+			            "Entity": "m_ccaa"
+			          }
+			        },
+			        "entity__medida.salario_variación_desde_2015": {
+			          "Target": {
+			            "Entity": "entity__medida.salario_variación_desde_2015"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_ccaa"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.salario_variación_desde_2015"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_ccaas_have__salario_variación_desde_2015"
+			        }
+			      ]
+			    },
+			    "m_calendario_has_entity__medida_salario_variación_desde_2015": {
+			      "Binding": {
+			        "ConceptualEntity": "M_CALENDARIO"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "m_calendario": {
+			          "Target": {
+			            "Entity": "m_calendario"
+			          }
+			        },
+			        "entity__medida.salario_variación_desde_2015": {
+			          "Target": {
+			            "Entity": "entity__medida.salario_variación_desde_2015"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_calendario"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.salario_variación_desde_2015"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_calendarios_have__salario_variación_desde_2015"
+			        }
+			      ]
+			    },
+			    "h_media_sueldos_anuale_has_entity__medida_salario_variación_desde_2015": {
+			      "Binding": {
+			        "ConceptualEntity": "H_MEDIA_SUELDOS_ANUALES"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_media_sueldos_anuale": {
+			          "Target": {
+			            "Entity": "h_media_sueldos_anuale"
+			          }
+			        },
+			        "entity__medida.salario_variación_desde_2015": {
+			          "Target": {
+			            "Entity": "entity__medida.salario_variación_desde_2015"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_media_sueldos_anuale"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.salario_variación_desde_2015"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_media_sueldos_anuales_have__salario_variación_desde_2015"
+			        }
+			      ]
+			    },
+			    "h_vivienda_has_entity__medida_IPV_variación_desde_2015": {
+			      "Binding": {
+			        "ConceptualEntity": "H_VIVIENDAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_vivienda": {
+			          "Target": {
+			            "Entity": "h_vivienda"
+			          }
+			        },
+			        "entity__medida.IPV_variación_desde_2015": {
+			          "Target": {
+			            "Entity": "entity__medida.IPV_variación_desde_2015"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_vivienda"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.IPV_variación_desde_2015"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_viviendas_have__IPV_variación_desde_2015"
+			        }
+			      ]
+			    },
+			    "m_sexo_has_entity__medida_salario_medio_actividad": {
+			      "Binding": {
+			        "ConceptualEntity": "M_SEXO"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "m_sexo": {
+			          "Target": {
+			            "Entity": "m_sexo"
+			          }
+			        },
+			        "entity__medida.salario_medio_actividad": {
+			          "Target": {
+			            "Entity": "entity__medida.salario_medio_actividad"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_sexo"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.salario_medio_actividad"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_sexos_have_salario_medio_actividad"
+			        }
+			      ]
+			    },
+			    "h_sueldos_por_actividad_has_entity__medida_salario_medio_actividad": {
+			      "Binding": {
+			        "ConceptualEntity": "H_SUELDOS_POR_ACTIVIDAD"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_sueldos_por_actividad": {
+			          "Target": {
+			            "Entity": "h_sueldos_por_actividad"
+			          }
+			        },
+			        "entity__medida.salario_medio_actividad": {
+			          "Target": {
+			            "Entity": "entity__medida.salario_medio_actividad"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_sueldos_por_actividad"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.salario_medio_actividad"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_sueldos_por_actividads_have_salario_medio_actividad"
+			        }
+			      ]
+			    },
+			    "m_sexo_has_entity__medida_salario_medio_edad": {
+			      "Binding": {
+			        "ConceptualEntity": "M_SEXO"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "m_sexo": {
+			          "Target": {
+			            "Entity": "m_sexo"
+			          }
+			        },
+			        "entity__medida.salario_medio_edad": {
+			          "Target": {
+			            "Entity": "entity__medida.salario_medio_edad"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_sexo"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.salario_medio_edad"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_sexos_have_salario_medio_edad"
+			        }
+			      ]
+			    },
+			    "h_media_sueldos_edad_has_entity__medida_salario_medio_edad": {
+			      "Binding": {
+			        "ConceptualEntity": "H_MEDIA_SUELDOS_EDAD"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_media_sueldos_edad": {
+			          "Target": {
+			            "Entity": "h_media_sueldos_edad"
+			          }
+			        },
+			        "entity__medida.salario_medio_edad": {
+			          "Target": {
+			            "Entity": "entity__medida.salario_medio_edad"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_media_sueldos_edad"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.salario_medio_edad"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_media_sueldos_edads_have_salario_medio_edad"
+			        }
+			      ]
+			    },
+			    "m_sexo_has_entity__medida_índice_salario_2015100": {
+			      "Binding": {
+			        "ConceptualEntity": "M_SEXO"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "m_sexo": {
+			          "Target": {
+			            "Entity": "m_sexo"
+			          }
+			        },
+			        "entity__medida.índice_salario_2015100": {
+			          "Target": {
+			            "Entity": "entity__medida.índice_salario_2015100"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_sexo"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.índice_salario_2015100"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_sexos_have_índice_salario_2015100"
+			        }
+			      ]
+			    },
+			    "m_ccaa_has_entity__medida_índice_salario_2015100": {
+			      "Binding": {
+			        "ConceptualEntity": "M_CCAA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "m_ccaa": {
+			          "Target": {
+			            "Entity": "m_ccaa"
+			          }
+			        },
+			        "entity__medida.índice_salario_2015100": {
+			          "Target": {
+			            "Entity": "entity__medida.índice_salario_2015100"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_ccaa"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.índice_salario_2015100"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_ccaas_have_índice_salario_2015100"
+			        }
+			      ]
+			    },
+			    "h_media_sueldos_anuale_has_entity__medida_índice_salario_2015100": {
+			      "Binding": {
+			        "ConceptualEntity": "H_MEDIA_SUELDOS_ANUALES"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_media_sueldos_anuale": {
+			          "Target": {
+			            "Entity": "h_media_sueldos_anuale"
+			          }
+			        },
+			        "entity__medida.índice_salario_2015100": {
+			          "Target": {
+			            "Entity": "entity__medida.índice_salario_2015100"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_media_sueldos_anuale"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.índice_salario_2015100"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_media_sueldos_anuales_have_índice_salario_2015100"
+			        }
+			      ]
+			    },
+			    "m_ccaa_has_entity__medida_brecha__anuales1": {
+			      "Binding": {
+			        "ConceptualEntity": "M_CCAA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "m_ccaa": {
+			          "Target": {
+			            "Entity": "m_ccaa"
+			          }
+			        },
+			        "entity__medida.brecha__anuales1": {
+			          "Target": {
+			            "Entity": "entity__medida.brecha__anuales1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_ccaa"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.brecha__anuales1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_ccaas_have_brecha__anuales"
+			        }
+			      ]
+			    },
+			    "h_media_sueldos_anuale_has_entity__medida_brecha__anuales1": {
+			      "Binding": {
+			        "ConceptualEntity": "H_MEDIA_SUELDOS_ANUALES"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_media_sueldos_anuale": {
+			          "Target": {
+			            "Entity": "h_media_sueldos_anuale"
+			          }
+			        },
+			        "entity__medida.brecha__anuales1": {
+			          "Target": {
+			            "Entity": "entity__medida.brecha__anuales1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_media_sueldos_anuale"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.brecha__anuales1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_media_sueldos_anuales_have_brecha__anuales"
+			        }
+			      ]
+			    },
+			    "m_ccaa_has_entity__medida_brecha__anuales": {
+			      "Binding": {
+			        "ConceptualEntity": "M_CCAA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "m_ccaa": {
+			          "Target": {
+			            "Entity": "m_ccaa"
+			          }
+			        },
+			        "entity__medida.brecha__anuales": {
+			          "Target": {
+			            "Entity": "entity__medida.brecha__anuales"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_ccaa"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.brecha__anuales"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_ccaas_have_brecha__anuales1"
+			        }
+			      ]
+			    },
+			    "h_media_sueldos_anuale_has_entity__medida_brecha__anuales": {
+			      "Binding": {
+			        "ConceptualEntity": "H_MEDIA_SUELDOS_ANUALES"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_media_sueldos_anuale": {
+			          "Target": {
+			            "Entity": "h_media_sueldos_anuale"
+			          }
+			        },
+			        "entity__medida.brecha__anuales": {
+			          "Target": {
+			            "Entity": "entity__medida.brecha__anuales"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_media_sueldos_anuale"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.brecha__anuales"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_media_sueldos_anuales_have_brecha__anuales1"
+			        }
+			      ]
+			    },
+			    "m_ccaa_has_entity__medida_salario_medio_m_anuales": {
+			      "Binding": {
+			        "ConceptualEntity": "M_CCAA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "m_ccaa": {
+			          "Target": {
+			            "Entity": "m_ccaa"
+			          }
+			        },
+			        "entity__medida.salario_medio_m_anuales": {
+			          "Target": {
+			            "Entity": "entity__medida.salario_medio_m_anuales"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_ccaa"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.salario_medio_m_anuales"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_ccaas_have_salario_medio_m_anuales"
+			        }
+			      ]
+			    },
+			    "h_media_sueldos_anuale_has_entity__medida_salario_medio_m_anuales": {
+			      "Binding": {
+			        "ConceptualEntity": "H_MEDIA_SUELDOS_ANUALES"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_media_sueldos_anuale": {
+			          "Target": {
+			            "Entity": "h_media_sueldos_anuale"
+			          }
+			        },
+			        "entity__medida.salario_medio_m_anuales": {
+			          "Target": {
+			            "Entity": "entity__medida.salario_medio_m_anuales"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_media_sueldos_anuale"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.salario_medio_m_anuales"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_media_sueldos_anuales_have_salario_medio_m_anuales"
+			        }
+			      ]
+			    },
+			    "m_ccaa_has_entity__medida_salario_medio_h_anuales": {
+			      "Binding": {
+			        "ConceptualEntity": "M_CCAA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "m_ccaa": {
+			          "Target": {
+			            "Entity": "m_ccaa"
+			          }
+			        },
+			        "entity__medida.salario_medio_h_anuales": {
+			          "Target": {
+			            "Entity": "entity__medida.salario_medio_h_anuales"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_ccaa"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.salario_medio_h_anuales"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_ccaas_have_salario_medio_h_anuales"
+			        }
+			      ]
+			    },
+			    "h_media_sueldos_anuale_has_entity__medida_salario_medio_h_anuales": {
+			      "Binding": {
+			        "ConceptualEntity": "H_MEDIA_SUELDOS_ANUALES"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_media_sueldos_anuale": {
+			          "Target": {
+			            "Entity": "h_media_sueldos_anuale"
+			          }
+			        },
+			        "entity__medida.salario_medio_h_anuales": {
+			          "Target": {
+			            "Entity": "entity__medida.salario_medio_h_anuales"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_media_sueldos_anuale"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.salario_medio_h_anuales"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_media_sueldos_anuales_have_salario_medio_h_anuales"
+			        }
+			      ]
+			    },
+			    "m_sexo_has_entity__medida_salario_medio_anuales": {
+			      "Binding": {
+			        "ConceptualEntity": "M_SEXO"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "m_sexo": {
+			          "Target": {
+			            "Entity": "m_sexo"
+			          }
+			        },
+			        "entity__medida.salario_medio_anuales": {
+			          "Target": {
+			            "Entity": "entity__medida.salario_medio_anuales"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_sexo"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.salario_medio_anuales"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_sexos_have_salario_medio_anuales"
+			        }
+			      ]
+			    },
+			    "m_ccaa_has_entity__medida_salario_medio_anuales": {
+			      "Binding": {
+			        "ConceptualEntity": "M_CCAA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "m_ccaa": {
+			          "Target": {
+			            "Entity": "m_ccaa"
+			          }
+			        },
+			        "entity__medida.salario_medio_anuales": {
+			          "Target": {
+			            "Entity": "entity__medida.salario_medio_anuales"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_ccaa"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.salario_medio_anuales"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_ccaas_have_salario_medio_anuales"
+			        }
+			      ]
+			    },
+			    "h_media_sueldos_anuale_has_entity__medida_salario_medio_anuales": {
+			      "Binding": {
+			        "ConceptualEntity": "H_MEDIA_SUELDOS_ANUALES"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_media_sueldos_anuale": {
+			          "Target": {
+			            "Entity": "h_media_sueldos_anuale"
+			          }
+			        },
+			        "entity__medida.salario_medio_anuales": {
+			          "Target": {
+			            "Entity": "entity__medida.salario_medio_anuales"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_media_sueldos_anuale"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.salario_medio_anuales"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_media_sueldos_anuales_have_salario_medio_anuales"
+			        }
+			      ]
+			    },
+			    "m_calendario_has_entity__medida_entity__año_base_indice_aux": {
+			      "Binding": {
+			        "ConceptualEntity": "M_CALENDARIO"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "m_calendario": {
+			          "Target": {
+			            "Entity": "m_calendario"
+			          }
+			        },
+			        "entity__medida.entity__año_base_indice_aux": {
+			          "Target": {
+			            "Entity": "entity__medida.entity__año_base_indice_aux"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_calendario"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.entity__año_base_indice_aux"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_calendarios_have__año_base_indice_aux"
+			        }
+			      ]
+			    },
+			    "m_sexo_has_entity__medida_entity__ambos_sexos_aux": {
+			      "Binding": {
+			        "ConceptualEntity": "M_SEXO"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "m_sexo": {
+			          "Target": {
+			            "Entity": "m_sexo"
+			          }
+			        },
+			        "entity__medida.entity__ambos_sexos_aux": {
+			          "Target": {
+			            "Entity": "entity__medida.entity__ambos_sexos_aux"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_sexo"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.entity__ambos_sexos_aux"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_sexos_have__ambos_sexos_aux"
+			        }
+			      ]
+			    },
+			    "m_ccaa_has_ccaa": {
+			      "Binding": {
+			        "ConceptualEntity": "M_CCAA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "m_ccaa": {
+			          "Target": {
+			            "Entity": "m_ccaa"
+			          }
+			        },
+			        "m_ccaa.ccaa": {
+			          "Target": {
+			            "Entity": "m_ccaa.ccaa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_ccaa"
+			            },
+			            "Object": {
+			              "Role": "m_ccaa.ccaa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_ccaas_have_ccaas"
+			        }
+			      ]
+			    },
+			    "m_sexo_has_es_total": {
+			      "Binding": {
+			        "ConceptualEntity": "M_SEXO"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "m_sexo": {
+			          "Target": {
+			            "Entity": "m_sexo"
+			          }
+			        },
+			        "m_sexo.es_total": {
+			          "Target": {
+			            "Entity": "m_sexo.es_total"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_sexo"
+			            },
+			            "Object": {
+			              "Role": "m_sexo.es_total"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_sexos_have_es_totals"
+			        }
+			      ]
+			    },
+			    "m_sexo_has_orden": {
+			      "Binding": {
+			        "ConceptualEntity": "M_SEXO"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "m_sexo": {
+			          "Target": {
+			            "Entity": "m_sexo"
+			          }
+			        },
+			        "m_sexo.orden": {
+			          "Target": {
+			            "Entity": "m_sexo.orden"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_sexo"
+			            },
+			            "Object": {
+			              "Role": "m_sexo.orden"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_sexos_have_ordens"
+			        }
+			      ]
+			    },
+			    "m_sexo_has_sexo": {
+			      "Binding": {
+			        "ConceptualEntity": "M_SEXO"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "m_sexo": {
+			          "Target": {
+			            "Entity": "m_sexo"
+			          }
+			        },
+			        "m_sexo.sexo": {
+			          "Target": {
+			            "Entity": "m_sexo.sexo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_sexo"
+			            },
+			            "Object": {
+			              "Role": "m_sexo.sexo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_sexos_have_sexos"
+			        }
+			      ]
+			    },
+			    "h_media_sueldos_edad_has_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "H_MEDIA_SUELDOS_EDAD"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_media_sueldos_edad": {
+			          "Target": {
+			            "Entity": "h_media_sueldos_edad"
+			          }
+			        },
+			        "h_media_sueldos_edad.fecha": {
+			          "Target": {
+			            "Entity": "h_media_sueldos_edad.fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_media_sueldos_edad"
+			            },
+			            "Object": {
+			              "Role": "h_media_sueldos_edad.fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_media_sueldos_edads_have_fechas"
+			        }
+			      ]
+			    },
+			    "h_media_sueldos_edad_has_salario_medio_anual": {
+			      "Binding": {
+			        "ConceptualEntity": "H_MEDIA_SUELDOS_EDAD"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_media_sueldos_edad": {
+			          "Target": {
+			            "Entity": "h_media_sueldos_edad"
+			          }
+			        },
+			        "h_media_sueldos_edad.salario_medio_anual": {
+			          "Target": {
+			            "Entity": "h_media_sueldos_edad.salario_medio_anual"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_media_sueldos_edad"
+			            },
+			            "Object": {
+			              "Role": "h_media_sueldos_edad.salario_medio_anual"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_media_sueldos_edads_have_salario_medio_anuals"
+			        }
+			      ]
+			    },
+			    "h_media_sueldos_edad_has_rango_edad": {
+			      "Binding": {
+			        "ConceptualEntity": "H_MEDIA_SUELDOS_EDAD"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_media_sueldos_edad": {
+			          "Target": {
+			            "Entity": "h_media_sueldos_edad"
+			          }
+			        },
+			        "h_media_sueldos_edad.rango_edad": {
+			          "Target": {
+			            "Entity": "h_media_sueldos_edad.rango_edad"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_media_sueldos_edad"
+			            },
+			            "Object": {
+			              "Role": "h_media_sueldos_edad.rango_edad"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_media_sueldos_edads_have_rango_edads"
+			        }
+			      ]
+			    },
+			    "m_calendario_has_trim": {
+			      "Binding": {
+			        "ConceptualEntity": "M_CALENDARIO"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "m_calendario": {
+			          "Target": {
+			            "Entity": "m_calendario"
+			          }
+			        },
+			        "m_calendario.trim": {
+			          "Target": {
+			            "Entity": "m_calendario.trim"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_calendario"
+			            },
+			            "Object": {
+			              "Role": "m_calendario.trim"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_calendarios_have_trims"
+			        }
+			      ]
+			    },
+			    "m_calendario_has_q": {
+			      "Binding": {
+			        "ConceptualEntity": "M_CALENDARIO"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "m_calendario": {
+			          "Target": {
+			            "Entity": "m_calendario"
+			          }
+			        },
+			        "m_calendario.q": {
+			          "Target": {
+			            "Entity": "m_calendario.q"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_calendario"
+			            },
+			            "Object": {
+			              "Role": "m_calendario.q"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_calendarios_have_q"
+			        }
+			      ]
+			    },
+			    "m_calendario_has_mes_abre": {
+			      "Binding": {
+			        "ConceptualEntity": "M_CALENDARIO"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "m_calendario": {
+			          "Target": {
+			            "Entity": "m_calendario"
+			          }
+			        },
+			        "m_calendario.mes_abre": {
+			          "Target": {
+			            "Entity": "m_calendario.mes_abre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_calendario"
+			            },
+			            "Object": {
+			              "Role": "m_calendario.mes_abre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_calendarios_have_mes_abres"
+			        }
+			      ]
+			    },
+			    "m_calendario_has_mes_texto": {
+			      "Binding": {
+			        "ConceptualEntity": "M_CALENDARIO"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "m_calendario": {
+			          "Target": {
+			            "Entity": "m_calendario"
+			          }
+			        },
+			        "m_calendario.mes_texto": {
+			          "Target": {
+			            "Entity": "m_calendario.mes_texto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_calendario"
+			            },
+			            "Object": {
+			              "Role": "m_calendario.mes_texto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_calendarios_have_mes_textos"
+			        }
+			      ]
+			    },
+			    "m_calendario_has_mes_num": {
+			      "Binding": {
+			        "ConceptualEntity": "M_CALENDARIO"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "m_calendario": {
+			          "Target": {
+			            "Entity": "m_calendario"
+			          }
+			        },
+			        "m_calendario.mes_num": {
+			          "Target": {
+			            "Entity": "m_calendario.mes_num"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_calendario"
+			            },
+			            "Object": {
+			              "Role": "m_calendario.mes_num"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_calendarios_have_mes_nums"
+			        }
+			      ]
+			    },
+			    "m_calendario_has_año": {
+			      "Binding": {
+			        "ConceptualEntity": "M_CALENDARIO"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "m_calendario": {
+			          "Target": {
+			            "Entity": "m_calendario"
+			          }
+			        },
+			        "m_calendario.año": {
+			          "Target": {
+			            "Entity": "m_calendario.año"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_calendario"
+			            },
+			            "Object": {
+			              "Role": "m_calendario.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_calendarios_have_años"
+			        }
+			      ]
+			    },
+			    "m_calendario_has_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "M_CALENDARIO"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "m_calendario": {
+			          "Target": {
+			            "Entity": "m_calendario"
+			          }
+			        },
+			        "m_calendario.fecha": {
+			          "Target": {
+			            "Entity": "m_calendario.fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "m_calendario"
+			            },
+			            "Object": {
+			              "Role": "m_calendario.fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "m_calendarios_have_fechas"
+			        }
+			      ]
+			    },
+			    "h_sueldos_por_actividad_has_salario": {
+			      "Binding": {
+			        "ConceptualEntity": "H_SUELDOS_POR_ACTIVIDAD"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_sueldos_por_actividad": {
+			          "Target": {
+			            "Entity": "h_sueldos_por_actividad"
+			          }
+			        },
+			        "h_sueldos_por_actividad.salario": {
+			          "Target": {
+			            "Entity": "h_sueldos_por_actividad.salario"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_sueldos_por_actividad"
+			            },
+			            "Object": {
+			              "Role": "h_sueldos_por_actividad.salario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_sueldos_por_actividads_have_salarios"
+			        }
+			      ]
+			    },
+			    "h_sueldos_por_actividad_has_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "H_SUELDOS_POR_ACTIVIDAD"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_sueldos_por_actividad": {
+			          "Target": {
+			            "Entity": "h_sueldos_por_actividad"
+			          }
+			        },
+			        "h_sueldos_por_actividad.fecha": {
+			          "Target": {
+			            "Entity": "h_sueldos_por_actividad.fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_sueldos_por_actividad"
+			            },
+			            "Object": {
+			              "Role": "h_sueldos_por_actividad.fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_sueldos_por_actividads_have_fechas"
+			        }
+			      ]
+			    },
+			    "h_sueldos_por_actividad_has_actividad": {
+			      "Binding": {
+			        "ConceptualEntity": "H_SUELDOS_POR_ACTIVIDAD"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_sueldos_por_actividad": {
+			          "Target": {
+			            "Entity": "h_sueldos_por_actividad"
+			          }
+			        },
+			        "h_sueldos_por_actividad.actividad": {
+			          "Target": {
+			            "Entity": "h_sueldos_por_actividad.actividad"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_sueldos_por_actividad"
+			            },
+			            "Object": {
+			              "Role": "h_sueldos_por_actividad.actividad"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_sueldos_por_actividads_have_actividads"
+			        }
+			      ]
+			    },
+			    "h_media_sueldos_anuale_has_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "H_MEDIA_SUELDOS_ANUALES"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_media_sueldos_anuale": {
+			          "Target": {
+			            "Entity": "h_media_sueldos_anuale"
+			          }
+			        },
+			        "h_media_sueldos_anuale.fecha": {
+			          "Target": {
+			            "Entity": "h_media_sueldos_anuale.fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_media_sueldos_anuale"
+			            },
+			            "Object": {
+			              "Role": "h_media_sueldos_anuale.fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_media_sueldos_anuales_have_fechas"
+			        }
+			      ]
+			    },
+			    "h_media_sueldos_anuale_has_salario_medio_anual": {
+			      "Binding": {
+			        "ConceptualEntity": "H_MEDIA_SUELDOS_ANUALES"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_media_sueldos_anuale": {
+			          "Target": {
+			            "Entity": "h_media_sueldos_anuale"
+			          }
+			        },
+			        "h_media_sueldos_anuale.salario_medio_anual": {
+			          "Target": {
+			            "Entity": "h_media_sueldos_anuale.salario_medio_anual"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_media_sueldos_anuale"
+			            },
+			            "Object": {
+			              "Role": "h_media_sueldos_anuale.salario_medio_anual"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_media_sueldos_anuales_have_salario_medio_anuals"
+			        }
+			      ]
+			    },
+			    "h_vivienda_has_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "H_VIVIENDAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_vivienda": {
+			          "Target": {
+			            "Entity": "h_vivienda"
+			          }
+			        },
+			        "h_vivienda.fecha": {
+			          "Target": {
+			            "Entity": "h_vivienda.fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_vivienda"
+			            },
+			            "Object": {
+			              "Role": "h_vivienda.fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_viviendas_have_fechas"
+			        }
+			      ]
+			    },
+			    "h_vivienda_has_valor": {
+			      "Binding": {
+			        "ConceptualEntity": "H_VIVIENDAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_vivienda": {
+			          "Target": {
+			            "Entity": "h_vivienda"
+			          }
+			        },
+			        "h_vivienda.valor": {
+			          "Target": {
+			            "Entity": "h_vivienda.valor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_vivienda"
+			            },
+			            "Object": {
+			              "Role": "h_vivienda.valor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_viviendas_have_valor"
+			        }
+			      ]
+			    },
+			    "h_vivienda_has_indicador": {
+			      "Binding": {
+			        "ConceptualEntity": "H_VIVIENDAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_vivienda": {
+			          "Target": {
+			            "Entity": "h_vivienda"
+			          }
+			        },
+			        "h_vivienda.indicador": {
+			          "Target": {
+			            "Entity": "h_vivienda.indicador"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_vivienda"
+			            },
+			            "Object": {
+			              "Role": "h_vivienda.indicador"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_viviendas_have_indicadors"
+			        }
+			      ]
+			    },
+			    "h_vivienda_has_tipo_vivienda": {
+			      "Binding": {
+			        "ConceptualEntity": "H_VIVIENDAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "h_vivienda": {
+			          "Target": {
+			            "Entity": "h_vivienda"
+			          }
+			        },
+			        "h_vivienda.tipo_vivienda": {
+			          "Target": {
+			            "Entity": "h_vivienda.tipo_vivienda"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "h_vivienda"
+			            },
+			            "Object": {
+			              "Role": "h_vivienda.tipo_vivienda"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "h_viviendas_have_tipo_viviendas"
+			        }
+			      ]
+			    }
+			  },
+			  "Agents": {
+			    "Internal": {
+			      "Version": "1.1.0"
+			    }
+			  }
 			}
 		contentType: json
 
