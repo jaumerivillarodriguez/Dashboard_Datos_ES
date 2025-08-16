@@ -49,10 +49,9 @@ table _Medidas
 			        KEEPFILTERS(M_CCAA[CCAA] <> "Total Nacional")         -- excluye Nacional si está seleccionada
 			    )
 			)
+		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
 		displayFolder: Salarios / Vivienda / IPC\Salarios
 		lineageTag: 7d460efd-1d02-4c10-ad7b-086a2c7ea945
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Salario medio H (anuales)' =
 			
@@ -109,7 +108,7 @@ table _Medidas
 			[Salario medio H (anuales)] - [Salario medio M (anuales)]
 			
 			```
-		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
+		formatString: #,0\ "€";-#,0\ "€";#,0\ "€"
 		displayFolder: Salarios / Vivienda / IPC\Salarios
 		lineageTag: 3014414a-8eaa-4047-b209-1be52050a60d
 
@@ -283,34 +282,18 @@ table _Medidas
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Brecha YoY %' = ```
+	measure 'Brecha % YoY' = ```
 			
-			VAR prev =  CALCULATE([Brecha € (anuales)],
-			                DATEADD(M_CALENDARIO[Fecha], -1, YEAR)
-			            )
-			    
+			VAR actual = [Brecha % (anuales)]
+			VAR anterior =
+			    CALCULATE([Brecha % (anuales)], DATEADD(M_CALENDARIO[Fecha], -1, YEAR))
 			RETURN
+			IF(ISBLANK(anterior), BLANK(), actual - anterior)
 			
-			    IF(
-			        ISBLANK(prev),
-			        BLANK(),
-			        DIVIDE([Brecha € (anuales)] - prev, prev)
-			    )
 			```
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		displayFolder: Salarios / Vivienda / IPC\_Temporales
 		lineageTag: d271b4b5-153d-4da9-946a-714627d71dc9
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'Brecha % YoY (p.p.)' = ```
-			
-			    [Brecha % (anuales)] - CALCULATE([Brecha % (anuales)], DATEADD(M_CALENDARIO[Fecha], -1, YEAR))
-			
-			```
-		displayFolder: Salarios / Vivienda / IPC\_Temporales
-		lineageTag: ad34a49d-a910-4541-9358-65a130697ca0
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure '% Brecha € variación desde 2015' = ```
 			
@@ -393,7 +376,7 @@ table _Medidas
 			    SWITCH(                                      -- símbolo antes del número
 			        TRUE(),
 			        yoy > 0, "▲ ",
-			        yoy < 0, "▼ ",
+			        yoy < 0, "▼ -",
 			        "= "
 			    ) &
 			    FORMAT(yoy, "0.00%")
@@ -423,6 +406,21 @@ table _Medidas
 		formatString: 0
 		displayFolder: Salarios / Vivienda / IPC\_Temporales
 		lineageTag: 1c23f859-c22d-4294-b18b-ce79be297840
+
+	measure 'Brecha % YoY (ftm)' = ```
+			
+			VAR diff = [Brecha % YoY]
+			RETURN
+			SWITCH(
+			    TRUE(),
+			    ISBLANK(diff), BLANK(),
+			    diff < 0, "▲ " & FORMAT(ABS(diff), "-0.00%"), 
+			    diff > 0, "▼ " & FORMAT(ABS(diff), "0.00%"),   
+			    "=" & FORMAT(0, "0%")                         
+			)
+			```
+		displayFolder: Salarios / Vivienda / IPC\_Temporales
+		lineageTag: a2030d6e-7a7b-45e0-b181-544384372dc3
 
 	partition _Medidas = m
 		mode: import
