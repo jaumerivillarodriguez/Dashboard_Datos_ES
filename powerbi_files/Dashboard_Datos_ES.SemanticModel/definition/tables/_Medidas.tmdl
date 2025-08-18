@@ -421,10 +421,74 @@ table _Medidas
 			    )
 			RETURN
 			IF( ISBLANK(prev), BLANK(), DIVIDE(cur - prev, prev) )
-		displayFolder: Salarios / Vivienda / IPC\IPC
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Salarios / Vivienda / IPC\_Temporales
 		lineageTag: 54897e5d-3a94-4876-8175-08207972e1f5
 
+	measure '% IPC YoY (fmt)' =
+			
+			VAR yoy = [% IPC YoY]
+			VAR eps = 0.000001  -- tolerancia para evitar falsos "cero" por redondeos
+			RETURN
+			IF(
+			    ISBLANK(yoy),
+			    BLANK(),
+			    SWITCH(
+			        TRUE(),
+			        yoy >  eps, "↑ " & FORMAT(yoy, "0.00%"),
+			        yoy < -eps, "↓ " & FORMAT(yoy, "0.00%"),
+			        "= "        & FORMAT(0,   "0.00%")
+			    )
+			)
+		displayFolder: Salarios / Vivienda / IPC\_Temporales
+		lineageTag: bd685ed8-1467-4483-880c-86c39fd89dd9
+
+	measure '% Variación del valor adquisitivo YoY' =
+			
+			VAR lastYear = [_Ultimo año salario]
+			VAR ctxYear  = MAX(M_CALENDARIO[Año])
+			VAR cur  = [% Variación del valor adquisitivo]
+			VAR prev =
+			    CALCULATE(
+			        [% Variación del valor adquisitivo],
+			        DATEADD(M_CALENDARIO[Fecha], -1, YEAR)
+			    )
+			RETURN
+			IF(
+			    ctxYear > lastYear || ISBLANK(prev),
+			    BLANK(),
+			    cur - prev
+			)
+		displayFolder: Salarios / Vivienda / IPC\_Temporales
+		lineageTag: 1efdb7d6-26a1-439e-a603-80704b71c297
+
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Variación del valor adquisitivo YoY (fmt)' =
+			
+			VAR yoy = [% Variación del valor adquisitivo YoY]
+			VAR eps = 0.000001
+			RETURN
+			IF(
+			    ISBLANK(yoy),
+			    BLANK(),
+			    SWITCH(
+			        TRUE(),
+			        yoy >  eps, "▲ " & FORMAT(yoy, "0.00%"),
+			        yoy < -eps, "▼ " & FORMAT(yoy, "0.00%"),
+			        "= "         & FORMAT(0,   "0.00%")
+			    )
+			)
+		displayFolder: Salarios / Vivienda / IPC\_Temporales
+		lineageTag: 22223fa1-cf60-4065-8739-2c8089510471
+
+	measure 'YoY txt Valor adquisitivo' =
+			
+			VAR selYear = MAX(M_CALENDARIO[Año])
+			RETURN
+			"Valor adquisitivo YoY | " & selYear & " vs " & selYear - 1
+		displayFolder: Salarios / Vivienda / IPC\_Temporales
+		lineageTag: d6216127-1469-43b7-9091-4f8648fe9866
 
 	partition _Medidas = m
 		mode: import
