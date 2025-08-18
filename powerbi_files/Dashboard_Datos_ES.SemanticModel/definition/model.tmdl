@@ -20,7 +20,6 @@ annotation PBI_ProTooling = ["DevMode"]
 
 ref table H_VIVIENDAS
 ref table H_MEDIA_SUELDOS_ANUALES
-ref table H_SUELDOS_POR_ACTIVIDAD
 ref table M_CALENDARIO
 ref table H_MEDIA_SUELDOS_EDAD
 ref table M_SEXO

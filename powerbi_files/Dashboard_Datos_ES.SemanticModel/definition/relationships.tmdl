@@ -2,10 +2,6 @@ relationship 275dd1ae-5fe4-b632-39b9-41416801cc57
 	fromColumn: H_MEDIA_SUELDOS_ANUALES.Fecha
 	toColumn: M_CALENDARIO.Fecha
 
-relationship c9c5070b-4c79-d151-ba02-7dd801cdd202
-	fromColumn: H_SUELDOS_POR_ACTIVIDAD.Fecha
-	toColumn: M_CALENDARIO.Fecha
-
 relationship 1bb4ade4-7c29-afa8-498b-e1454eeeb473
 	fromColumn: H_VIVIENDAS.Fecha
 	toColumn: M_CALENDARIO.Fecha
@@ -24,10 +20,6 @@ relationship 38470680-e2a5-94a8-0e76-353b0fb2e041
 
 relationship 33eec39a-fa01-3813-f3b9-5a5ebbfa051a
 	fromColumn: H_MEDIA_SUELDOS_ANUALES.Sexo
-	toColumn: M_SEXO.Sexo
-
-relationship f94179aa-2f43-db3c-6dea-a50ab98311b6
-	fromColumn: H_SUELDOS_POR_ACTIVIDAD.Sexo
 	toColumn: M_SEXO.Sexo
 
 relationship 75285f9b-2a1b-0adc-9ebc-96347fb08402

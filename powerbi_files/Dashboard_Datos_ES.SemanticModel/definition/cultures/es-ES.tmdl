@@ -323,109 +323,6 @@ cultureInfo es-ES
 			      ],
 			      "SemanticType": "Time"
 			    },
-			    "h_sueldos_por_actividad": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "H_SUELDOS_POR_ACTIVIDAD"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "h sueldos por actividad": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "h sueldo por actividad": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.78
-			          }
-			        },
-			        {
-			          "H_SUELDOS_POR_ACTIVIDAD": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "h_sueldos_por_actividad.actividad": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "H_SUELDOS_POR_ACTIVIDAD",
-			          "ConceptualProperty": "Actividad"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "actividad": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "h_sueldos_por_actividad.fecha": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "H_SUELDOS_POR_ACTIVIDAD",
-			          "ConceptualProperty": "Fecha"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "fecha": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "date": {
-			            "State": "Generated",
-			            "Weight": 0.7
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
-			    },
-			    "h_sueldos_por_actividad.sexo": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "H_SUELDOS_POR_ACTIVIDAD",
-			          "ConceptualProperty": "Sexo"
-			        }
-			      },
-			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
-			      "Terms": [
-			        {
-			          "sexo": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "h_sueldos_por_actividad.salario": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "H_SUELDOS_POR_ACTIVIDAD",
-			          "ConceptualProperty": "Salario"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "salario": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
 			    "m_calendario": {
 			      "Definition": {
 			        "Binding": {
@@ -1133,28 +1030,6 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "entity__medida.salario_medio_actividad": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Medidas",
-			          "ConceptualProperty": "Salario medio (actividad)"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "salario medio (actividad)": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "salario medio": {
-			            "State": "Generated",
-			            "Weight": 0.75
-			          }
-			        }
-			      ]
-			    },
 			    "entity__medida.IPV_variación_desde_2015": {
 			      "Definition": {
 			        "Binding": {
@@ -1205,7 +1080,7 @@ cultureInfo es-ES
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Medidas",
-			          "ConceptualProperty": "% Salario variación desde 2015"
+			          "ConceptualProperty": "% Variación salario medio"
 			        }
 			      },
 			      "State": "Generated",
@@ -1711,98 +1586,6 @@ cultureInfo es-ES
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "m_calendarios_have_h_media_sueldos_edads"
-			        }
-			      ]
-			    },
-			    "h_sueldos_por_actividad_has_m_sexo": {
-			      "Binding": {
-			        "ConceptualEntity": "H_SUELDOS_POR_ACTIVIDAD"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "h_sueldos_por_actividad": {
-			          "Target": {
-			            "Entity": "h_sueldos_por_actividad"
-			          }
-			        },
-			        "m_sexo": {
-			          "Target": {
-			            "Entity": "m_sexo"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "h_sueldos_por_actividad"
-			            },
-			            "Object": {
-			              "Role": "m_sexo"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "h_sueldos_por_actividads_have_m_sexos"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "m_sexo"
-			            },
-			            "Object": {
-			              "Role": "h_sueldos_por_actividad"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "m_sexos_have_h_sueldos_por_actividads"
-			        }
-			      ]
-			    },
-			    "h_sueldos_por_actividad_has_m_calendario": {
-			      "Binding": {
-			        "ConceptualEntity": "H_SUELDOS_POR_ACTIVIDAD"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "h_sueldos_por_actividad": {
-			          "Target": {
-			            "Entity": "h_sueldos_por_actividad"
-			          }
-			        },
-			        "m_calendario": {
-			          "Target": {
-			            "Entity": "m_calendario"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "h_sueldos_por_actividad"
-			            },
-			            "Object": {
-			              "Role": "m_calendario"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "h_sueldos_por_actividads_have_m_calendarios"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "m_calendario"
-			            },
-			            "Object": {
-			              "Role": "h_sueldos_por_actividad"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "m_calendarios_have_h_sueldos_por_actividads"
 			        }
 			      ]
 			    },
@@ -3224,39 +3007,6 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "h_sueldos_por_actividad_has_entity__medida_salario_medio_actividad": {
-			      "Binding": {
-			        "ConceptualEntity": "H_SUELDOS_POR_ACTIVIDAD"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "h_sueldos_por_actividad": {
-			          "Target": {
-			            "Entity": "h_sueldos_por_actividad"
-			          }
-			        },
-			        "entity__medida.salario_medio_actividad": {
-			          "Target": {
-			            "Entity": "entity__medida.salario_medio_actividad"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "h_sueldos_por_actividad"
-			            },
-			            "Object": {
-			              "Role": "entity__medida.salario_medio_actividad"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "h_sueldos_por_actividads_have_salario_medio_actividad"
-			        }
-			      ]
-			    },
 			    "m_sexo_has_entity__medida_salario_medio_edad": {
 			      "Binding": {
 			        "ConceptualEntity": "M_SEXO"
@@ -4310,105 +4060,6 @@ cultureInfo es-ES
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "m_calendarios_have_fechas"
-			        }
-			      ]
-			    },
-			    "h_sueldos_por_actividad_has_salario": {
-			      "Binding": {
-			        "ConceptualEntity": "H_SUELDOS_POR_ACTIVIDAD"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "h_sueldos_por_actividad": {
-			          "Target": {
-			            "Entity": "h_sueldos_por_actividad"
-			          }
-			        },
-			        "h_sueldos_por_actividad.salario": {
-			          "Target": {
-			            "Entity": "h_sueldos_por_actividad.salario"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "h_sueldos_por_actividad"
-			            },
-			            "Object": {
-			              "Role": "h_sueldos_por_actividad.salario"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "h_sueldos_por_actividads_have_salarios"
-			        }
-			      ]
-			    },
-			    "h_sueldos_por_actividad_has_fecha": {
-			      "Binding": {
-			        "ConceptualEntity": "H_SUELDOS_POR_ACTIVIDAD"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "h_sueldos_por_actividad": {
-			          "Target": {
-			            "Entity": "h_sueldos_por_actividad"
-			          }
-			        },
-			        "h_sueldos_por_actividad.fecha": {
-			          "Target": {
-			            "Entity": "h_sueldos_por_actividad.fecha"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "h_sueldos_por_actividad"
-			            },
-			            "Object": {
-			              "Role": "h_sueldos_por_actividad.fecha"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "h_sueldos_por_actividads_have_fechas"
-			        }
-			      ]
-			    },
-			    "h_sueldos_por_actividad_has_actividad": {
-			      "Binding": {
-			        "ConceptualEntity": "H_SUELDOS_POR_ACTIVIDAD"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "h_sueldos_por_actividad": {
-			          "Target": {
-			            "Entity": "h_sueldos_por_actividad"
-			          }
-			        },
-			        "h_sueldos_por_actividad.actividad": {
-			          "Target": {
-			            "Entity": "h_sueldos_por_actividad.actividad"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "h_sueldos_por_actividad"
-			            },
-			            "Object": {
-			              "Role": "h_sueldos_por_actividad.actividad"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "h_sueldos_por_actividads_have_actividads"
 			        }
 			      ]
 			    },

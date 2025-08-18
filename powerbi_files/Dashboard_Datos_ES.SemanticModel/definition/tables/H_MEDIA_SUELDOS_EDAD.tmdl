@@ -19,13 +19,12 @@ table H_MEDIA_SUELDOS_EDAD
 
 	column 'Salario medio anual'
 		dataType: double
+		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
 		lineageTag: 4f2391d5-1ed1-4684-b82c-b8a6d7fc3da1
 		summarizeBy: sum
 		sourceColumn: Salario medio anual
 
 		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column Fecha
 		dataType: dateTime
@@ -37,6 +36,14 @@ table H_MEDIA_SUELDOS_EDAD
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
+
+	column Leyenda
+		dataType: string
+		lineageTag: 350bfb59-1f9e-4584-b7da-cb67de220523
+		summarizeBy: none
+		sourceColumn: Leyenda
+
+		annotation SummarizationSetBy = Automatic
 
 	partition H_MEDIA_SUELDOS_EDAD = m
 		mode: import
@@ -58,10 +65,12 @@ table H_MEDIA_SUELDOS_EDAD
 				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Tipo cambiado",{{"Column4", "Año"}, {"", "Rango edad"}}),
 				    #"Otras columnas con anulación de dinamización" = Table.UnpivotOtherColumns(#"Columnas con nombre cambiado", {"Rango edad", "Año"}, "Sexo", "Salario medio anual"),
 				    #"Personalizada agregada" = Table.AddColumn(#"Otras columnas con anulación de dinamización", "Fecha", each #date([Año], 1, 1)),
-				    #"Tipo cambiado1" = Table.TransformColumnTypes(#"Personalizada agregada",{{"Fecha", type date}, {"Rango edad", type text}}),
-				    #"Columnas quitadas1" = Table.RemoveColumns(#"Tipo cambiado1",{"Año"})
+				    #"Columnas quitadas1" = Table.RemoveColumns(#"Personalizada agregada",{"Año"}),
+				    #"Added Conditional Column" = Table.AddColumn(#"Columnas quitadas1", "Leyenda", each if [Rango edad] = "De 20 a 24 años" then "Jovenes en edad de emancipación" else if [Rango edad] = "De 25 a 29 años" then "Jovenes en edad de emancipación" else if [Rango edad] = "Todas las edades" then "Salario medio" else "Adultos"),
+				    #"Replaced Value" = Table.ReplaceValue(#"Added Conditional Column","Todas las edades","Salario medio",Replacer.ReplaceText,{"Rango edad"}),
+				    #"Tipo cambiado1" = Table.TransformColumnTypes(#"Replaced Value",{{"Fecha", type date}, {"Rango edad", type text}, {"Leyenda", type text}})
 				in
-				    #"Columnas quitadas1"
+				    #"Tipo cambiado1"
 
 	annotation PBI_NavigationStepName = Navegación
 
