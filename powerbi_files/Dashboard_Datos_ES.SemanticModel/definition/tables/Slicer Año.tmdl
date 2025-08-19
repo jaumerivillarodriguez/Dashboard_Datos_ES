@@ -1,0 +1,25 @@
+table 'Slicer Año'
+	lineageTag: b361591d-1209-4d41-8d77-4eecb0eba506
+
+	column año
+		formatString: 0
+		lineageTag: 3948a46e-5f2f-4ace-8379-6f209e20a150
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [año]
+
+		annotation SummarizationSetBy = User
+
+	partition 'Slicer Año' = calculated
+		mode: import
+		source = ```
+				
+				FILTER (
+				    DISTINCT ( SELECTCOLUMNS ( M_CALENDARIO, "año", M_CALENDARIO[año] ) ),
+				    [año] >= 2015   -- opcional, para que coincida con tu rango visible
+				)
+				
+				```
+
+	annotation PBI_Id = 9647e3b99b1d45ae922d8f7acb6c71a5
+

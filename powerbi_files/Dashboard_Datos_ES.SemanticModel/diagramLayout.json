@@ -4,14 +4,14 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 572.49999046325684,
+        "x": 759.99999046325684,
         "y": 0
       },
       "nodes": [
         {
           "location": {
             "x": 0,
-            "y": 360.3575260135438
+            "y": 377.17506647565284
           },
           "nodeIndex": "H_VIVIENDAS",
           "nodeLineageTag": "b412a3d9-5412-473c-a701-d2093a7e2a06",
@@ -24,7 +24,7 @@
         {
           "location": {
             "x": 280.55510982134859,
-            "y": 364.65434489626972
+            "y": 381.47188535837876
           },
           "nodeIndex": "H_MEDIA_SUELDOS_ANUALES",
           "nodeLineageTag": "be815ed7-1f3b-4e48-a289-f1b6a9e8a614",
@@ -37,7 +37,7 @@
         {
           "location": {
             "x": 445.43301926883782,
-            "y": 33.63508092421808
+            "y": 50.452621386327117
           },
           "nodeIndex": "M_CALENDARIO",
           "nodeLineageTag": "3048ba3e-06a2-4045-b10c-ec32b927db32",
@@ -50,7 +50,7 @@
         {
           "location": {
             "x": 892.75425626206606,
-            "y": 365.57773217908186
+            "y": 382.3952726411909
           },
           "nodeIndex": "H_MEDIA_SUELDOS_EDAD",
           "nodeLineageTag": "32b88ee7-875d-4ef6-a03b-31677ad04b26",
@@ -63,7 +63,7 @@
         {
           "location": {
             "x": 204.97580731978948,
-            "y": 792.29301732602562
+            "y": 809.11055778813466
           },
           "nodeIndex": "M_CCAA",
           "nodeLineageTag": "bff33f9c-13cd-4ffe-8ddf-f060dcb67fca",
@@ -76,7 +76,7 @@
         {
           "location": {
             "x": 611.53897111512219,
-            "y": 771.551751435667
+            "y": 788.36929189777607
           },
           "nodeIndex": "M_SEXO",
           "nodeLineageTag": "709e5911-0b75-4f61-8ef8-f5edb1af476a",
@@ -89,7 +89,7 @@
         {
           "location": {
             "x": 1676.9422080838449,
-            "y": 118.34565510373024
+            "y": 135.16319556583926
           },
           "nodeIndex": "_Medidas",
           "nodeLineageTag": "662da2b8-bb3e-41d1-ac0b-e37aa6cf9e49",
@@ -102,7 +102,7 @@
         {
           "location": {
             "x": 1159.9289845922815,
-            "y": 365.00291521466272
+            "y": 381.82045567677176
           },
           "nodeIndex": "H_IPC",
           "nodeLineageTag": "5408f055-d44e-4262-884d-d4246889550f",
@@ -111,6 +111,19 @@
             "width": 234
           },
           "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 1879.6922080838449,
+            "y": 468.02587571783351
+          },
+          "nodeIndex": "Slicer Año",
+          "nodeLineageTag": "b361591d-1209-4d41-8d77-4eecb0eba506",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "Todas las tablas",

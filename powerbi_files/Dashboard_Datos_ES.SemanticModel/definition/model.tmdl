@@ -26,6 +26,7 @@ ref table M_SEXO
 ref table M_CCAA
 ref table _Medidas
 ref table H_IPC
+ref table 'Slicer Año'
 
 ref cultureInfo es-ES
 

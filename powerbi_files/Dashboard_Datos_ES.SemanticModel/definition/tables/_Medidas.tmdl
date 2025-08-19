@@ -490,6 +490,68 @@ table _Medidas
 		displayFolder: Salarios / Vivienda / IPC\_Temporales
 		lineageTag: d6216127-1469-43b7-9091-4f8648fe9866
 
+	measure 'Label IPV (Min–Max–Sel)' = ```
+			
+			VAR AnioEje = MAX ( M_CALENDARIO[año] )  -- año del punto
+			VAR AnioMin =
+			    MINX ( ALLSELECTED ( M_CALENDARIO[año] ), M_CALENDARIO[año] )
+			VAR AnioMax =
+			    MAXX ( ALLSELECTED ( M_CALENDARIO[año] ), M_CALENDARIO[año] )
+			VAR AnioSel = [Año seleccionado (slicer)]
+			
+			-- ¿mostrar etiqueta en este punto?
+			VAR Mostrar =
+			       ( AnioEje = AnioMin )
+			    || ( AnioEje = AnioMax )
+			    || ( NOT ISBLANK ( AnioSel ) && AnioEje = AnioSel )
+			
+			-- Valor de la serie en el año del eje, ignorando slicer
+			VAR ValorEnAnioEje =
+			    CALCULATE (
+			        [% IPV variación desde 2015],
+			        REMOVEFILTERS ( 'Slicer Año' ),            -- ignora el slicer desconectado
+			        REMOVEFILTERS ( M_CALENDARIO[año] ),       -- limpia el año actual
+			        TREATAS ( { AnioEje }, M_CALENDARIO[año] ) -- fuerza el año del punto
+			    )
+			RETURN IF ( Mostrar, ValorEnAnioEje, BLANK() )
+			
+			
+			```
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: _Auxiliares
+		lineageTag: 7626d009-bfca-47c3-ae5b-ac5793e95e3d
+
+	measure 'Debug Label' = ```
+			
+			VAR AnioEje = MAX ( M_CALENDARIO[año] )  -- año de la fila/punto
+			VAR AnioMin =
+			    MINX ( ALLSELECTED ( M_CALENDARIO[año] ), M_CALENDARIO[año] )
+			VAR AnioMax =
+			    MAXX ( ALLSELECTED ( M_CALENDARIO[año] ), M_CALENDARIO[año] )
+			VAR AnioSel = [Año seleccionado (slicer)]
+			VAR MostrarSoloFilaSeleccionada =
+			    NOT ISBLANK ( AnioSel ) && ( AnioEje = AnioSel )
+			RETURN
+			    IF (
+			        MostrarSoloFilaSeleccionada,
+			        "Eje=" & AnioEje
+			            & " | Min=" & AnioMin
+			            & " | Max=" & AnioMax
+			            & " | Sel=" & AnioSel,
+			        BLANK()
+			    )
+			
+			```
+		displayFolder: _Auxiliares
+		lineageTag: 16eeeb7a-5a2a-4f98-b824-b3ad992a02d5
+
+	measure 'Año seleccionado (slicer)' =
+			
+			SELECTEDVALUE ( 'Slicer Año'[año] )
+		formatString: 0
+		displayFolder: _Auxiliares
+		lineageTag: 56190113-d95f-48c6-8444-7f667f263e76
+
 	partition _Medidas = m
 		mode: import
 		source =
